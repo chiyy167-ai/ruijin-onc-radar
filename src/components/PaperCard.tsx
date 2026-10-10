@@ -3,6 +3,7 @@ import {
   formatPaperCitation,
   formatTrialCitation,
 } from '../lib/favorites'
+import { getCachedTranslation, translateToZh } from '../lib/translate'
 import {
   DISEASE_LABELS,
   STUDY_TYPE_LABELS,
@@ -65,6 +66,25 @@ function BookmarkIcon({ filled }: { filled: boolean }) {
   )
 }
 
+function TranslateIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      aria-hidden
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M5 8h7M8.5 8c0 4.5-2 7.5-5 9m9.5-9h7M16 8c0 4.5 2 7.5 5 9M9 20l3-12h.5l3 12M10.5 16h4"
+      />
+    </svg>
+  )
+}
+
 async function copyText(text: string): Promise<boolean> {
   try {
     await navigator.clipboard.writeText(text)
@@ -110,6 +130,12 @@ export function PaperCard({
   const [copied, setCopied] = useState(false)
   const [expanded, setExpanded] = useState(false)
   const [shared, setShared] = useState(false)
+  const [showZh, setShowZh] = useState(false)
+  const [zhText, setZhText] = useState<string | null>(() =>
+    paper.abstract ? getCachedTranslation(paper.abstract) : null,
+  )
+  const [translating, setTranslating] = useState(false)
+  const [translateErr, setTranslateErr] = useState<string | null>(null)
 
   const handleCopy = async () => {
     const ok = await copyText(formatPaperCitation(paper))
@@ -130,6 +156,30 @@ export function PaperCard({
       window.setTimeout(() => setShared(false), 1600)
     }
   }
+
+  const handleTranslate = async () => {
+    if (!paper.abstract) return
+    // 已有译文：切换中英文
+    if (zhText) {
+      setShowZh((v) => !v)
+      setTranslateErr(null)
+      return
+    }
+    setTranslating(true)
+    setTranslateErr(null)
+    setExpanded(true)
+    try {
+      const zh = await translateToZh(paper.abstract)
+      setZhText(zh)
+      setShowZh(true)
+    } catch (e) {
+      setTranslateErr(e instanceof Error ? e.message : '翻译失败')
+    } finally {
+      setTranslating(false)
+    }
+  }
+
+  const abstractDisplay = showZh && zhText ? zhText : paper.abstract
 
   return (
     <article
@@ -237,15 +287,48 @@ export function PaperCard({
 
       {paper.abstract && (
         <div className="mt-3 pl-2">
+          <div className="mb-1.5 flex flex-wrap items-center gap-2">
+            <button
+              type="button"
+              onClick={handleTranslate}
+              disabled={translating}
+              aria-label={showZh ? '显示英文原文' : '翻译成中文'}
+              className={[
+                'inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-medium transition',
+                'ring-1 disabled:opacity-60',
+                showZh
+                  ? 'bg-violet-500/15 text-violet-300 ring-violet-400/40'
+                  : 'text-slate-300 ring-slate-600/80 hover:bg-slate-800',
+              ].join(' ')}
+            >
+              <TranslateIcon />
+              {translating
+                ? '翻译中…'
+                : showZh
+                  ? '看原文'
+                  : zhText
+                    ? '看中文'
+                    : '译中文'}
+            </button>
+            {showZh && (
+              <span className="text-[10px] text-slate-500">
+                机器翻译，仅供参考
+              </span>
+            )}
+          </div>
           <p
             className={[
-              'text-sm leading-relaxed text-slate-400',
+              'text-sm leading-relaxed',
+              showZh ? 'text-slate-300' : 'text-slate-400',
               expanded ? '' : 'line-clamp-3',
             ].join(' ')}
           >
-            {paper.abstract}
+            {abstractDisplay}
           </p>
-          {paper.abstract.length > 120 && (
+          {translateErr && (
+            <p className="mt-1.5 text-xs text-rose-300">{translateErr}</p>
+          )}
+          {(paper.abstract.length > 120 || (zhText && zhText.length > 80)) && (
             <button
               type="button"
               onClick={() => setExpanded((v) => !v)}
