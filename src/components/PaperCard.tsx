@@ -38,18 +38,19 @@ export function PaperCard({ paper }: PaperCardProps) {
   const studyTypes = paper.categories?.studyType ?? []
 
   return (
-    <article className="rounded-xl bg-[#1e293b] p-4 shadow-sm ring-1 ring-slate-700/60">
+    <article className="paper-card relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#1e293b]/90 p-4 backdrop-blur-sm">
+      <div className="absolute inset-y-3 left-0 w-1 rounded-r-full bg-gradient-to-b from-sky-400/80 to-sky-600/20" />
       <a
         href={paper.pubmedUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="block text-[15px] font-semibold leading-snug text-slate-100 hover:text-sky-300"
+        className="block pl-2 text-[15px] font-semibold leading-snug text-slate-50 hover:text-sky-300"
       >
         {paper.title}
       </a>
 
       {(diseases.length > 0 || studyTypes.length > 0) && (
-        <div className="mt-2.5 flex flex-wrap gap-1.5">
+        <div className="mt-2.5 flex flex-wrap gap-1.5 pl-2">
           {diseases.map((d) => (
             <Pill
               key={`d-${d}`}
@@ -67,7 +68,7 @@ export function PaperCard({ paper }: PaperCardProps) {
         </div>
       )}
 
-      <div className="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-400">
+      <div className="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-1 pl-2 text-xs text-slate-400">
         <span className="text-slate-300">{paper.journal || 'Unknown journal'}</span>
         <span className="text-slate-600">·</span>
         <time dateTime={paper.date}>{paper.date || '—'}</time>
@@ -80,7 +81,7 @@ export function PaperCard({ paper }: PaperCardProps) {
       </div>
 
       {paper.abstract && (
-        <p className="mt-3 line-clamp-4 text-sm leading-relaxed text-slate-400">
+        <p className="mt-3 line-clamp-4 pl-2 text-sm leading-relaxed text-slate-400">
           {paper.abstract}
         </p>
       )}
@@ -90,16 +91,17 @@ export function PaperCard({ paper }: PaperCardProps) {
 
 export function TrialCard({ trial }: TrialCardProps) {
   return (
-    <article className="rounded-xl bg-[#1e293b] p-4 shadow-sm ring-1 ring-slate-700/60">
+    <article className="paper-card relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#1e293b]/90 p-4 backdrop-blur-sm">
+      <div className="absolute inset-y-3 left-0 w-1 rounded-r-full bg-gradient-to-b from-emerald-400/80 to-emerald-600/20" />
       <a
         href={trial.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="block text-[15px] font-semibold leading-snug text-slate-100 hover:text-sky-300"
+        className="block pl-2 text-[15px] font-semibold leading-snug text-slate-50 hover:text-sky-300"
       >
         {trial.title}
       </a>
-      <div className="mt-2.5 flex flex-wrap gap-1.5">
+      <div className="mt-2.5 flex flex-wrap gap-1.5 pl-2">
         {trial.category && (
           <Pill
             text={DISEASE_LABELS[trial.category] ?? trial.category}
@@ -108,7 +110,7 @@ export function TrialCard({ trial }: TrialCardProps) {
         )}
         <Pill text="临床试验" tone="study" />
       </div>
-      <div className="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-400">
+      <div className="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-1 pl-2 text-xs text-slate-400">
         <span className="font-mono text-slate-300">{trial.nctId}</span>
         <span className="text-slate-600">·</span>
         <span>{trial.status || '—'}</span>

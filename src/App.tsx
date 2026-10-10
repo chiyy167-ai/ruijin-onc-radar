@@ -1,20 +1,25 @@
 import { useEffect, useMemo, useState } from 'react'
 import FilterBar from './components/FilterBar'
+import LoadingScreen from './components/LoadingScreen'
 import { PaperCard, TrialCard } from './components/PaperCard'
 import type { RadarData } from './types'
 
 type Tab = 'papers' | 'trials'
+const MIN_SPLASH_MS = 1400
 
 export default function App() {
   const [data, setData] = useState<RadarData | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
+  const [showSplash, setShowSplash] = useState(true)
   const [tab, setTab] = useState<Tab>('papers')
   const [selectedDisease, setSelectedDisease] = useState<string | null>(null)
   const [selectedType, setSelectedType] = useState<string | null>(null)
 
   useEffect(() => {
     let cancelled = false
+    const started = Date.now()
+
     async function load() {
       setLoading(true)
       setError(null)
@@ -30,9 +35,16 @@ export default function App() {
           setError(e instanceof Error ? e.message : '数据加载失败')
         }
       } finally {
-        if (!cancelled) setLoading(false)
+        if (!cancelled) {
+          setLoading(false)
+          const wait = Math.max(0, MIN_SPLASH_MS - (Date.now() - started))
+          window.setTimeout(() => {
+            if (!cancelled) setShowSplash(false)
+          }, wait)
+        }
       }
     }
+
     load()
     return () => {
       cancelled = true
@@ -56,7 +68,6 @@ export default function App() {
   const filteredTrials = useMemo(() => {
     return trials.filter((t) => {
       const diseaseMatch = !selectedDisease || t.category === selectedDisease
-      // 试验列表本身即临床试验；若选了其他研究类型则隐藏
       const typeMatch =
         !selectedType ||
         selectedType === 'clinical_trial' ||
@@ -66,21 +77,43 @@ export default function App() {
   }, [trials, selectedDisease, selectedType])
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-slate-100">
-      <header className="border-b border-slate-800/80 bg-gradient-to-b from-slate-900 to-[#0f172a] px-4 pb-4 pt-5">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-xs font-medium tracking-wide text-sky-400/90">
-            Ruijin Oncology Research Radar
-          </p>
-          <h1 className="mt-1 text-xl font-bold tracking-tight text-white sm:text-2xl">
-            瑞金肿瘤内科科研雷达
-          </h1>
-          <p className="mt-1.5 text-sm text-slate-400">
+    <div className="app-shell min-h-screen text-slate-100">
+      <LoadingScreen visible={showSplash} />
+
+      <header className="relative overflow-hidden border-b border-slate-800/70 px-4 pb-5 pt-4">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/80 via-transparent to-transparent" />
+        <div className="relative mx-auto max-w-3xl">
+          <div className="flex items-start gap-3.5">
+            <div className="shrink-0 rounded-full bg-white p-1 shadow-[0_0_24px_rgba(185,28,28,0.22)] ring-1 ring-amber-200/30">
+              <img
+                src={`${import.meta.env.BASE_URL}logo-ruijin.svg`}
+                alt="瑞金医院"
+                className="h-14 w-14 object-contain sm:h-16 sm:w-16"
+                draggable={false}
+              />
+            </div>
+            <div className="min-w-0 flex-1 pt-0.5">
+              <p className="text-[11px] font-medium tracking-[0.14em] text-rose-300/90">
+                上海交通大学医学院附属瑞金医院
+              </p>
+              <h1 className="mt-1 text-xl font-bold tracking-tight text-white sm:text-2xl">
+                瑞金肿瘤内科科研雷达
+              </h1>
+              <p className="mt-1 text-xs text-sky-300/80 sm:text-sm">
+                Ruijin Oncology Research Radar · RJ-Onc Radar
+              </p>
+            </div>
+          </div>
+          <p className="mt-3 text-sm leading-relaxed text-slate-400">
             胃肠癌症最新文献与临床试验 · 每日自动更新
           </p>
-          <p className="mt-2 text-xs text-slate-500">
+          <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-slate-900/60 px-3 py-1 text-[11px] text-slate-400 ring-1 ring-slate-700/70">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+            </span>
             更新时间：{data?.updatedAt ?? (loading ? '加载中…' : '—')}
-          </p>
+          </div>
         </div>
       </header>
 
@@ -92,7 +125,7 @@ export default function App() {
       />
 
       <main className="mx-auto max-w-3xl px-3 py-4 safe-bottom">
-        <div className="mb-4 flex gap-2">
+        <div className="mb-4 flex gap-2 rounded-xl bg-slate-900/40 p-1 ring-1 ring-slate-700/50">
           <TabButton
             active={tab === 'papers'}
             onClick={() => setTab('papers')}
@@ -105,18 +138,12 @@ export default function App() {
           />
         </div>
 
-        {loading && (
-          <div className="rounded-xl bg-[#1e293b] px-4 py-10 text-center text-sm text-slate-400 ring-1 ring-slate-700/60">
-            正在加载最新数据…
-          </div>
-        )}
-
         {!loading && error && (
-          <div className="rounded-xl bg-rose-950/40 px-4 py-6 text-center text-sm text-rose-300 ring-1 ring-rose-800/50">
-            {error}
+          <div className="rise-in rounded-2xl bg-rose-950/40 px-4 py-8 text-center text-sm text-rose-300 ring-1 ring-rose-800/50">
+            <p className="font-medium">{error}</p>
             <button
               type="button"
-              className="mt-3 block w-full text-sky-300 underline"
+              className="mt-4 rounded-full bg-sky-500/15 px-4 py-2 text-sky-300 ring-1 ring-sky-400/30"
               onClick={() => window.location.reload()}
             >
               重新加载
@@ -129,8 +156,14 @@ export default function App() {
             {filteredPapers.length === 0 ? (
               <EmptyState text="当前筛选条件下暂无文献" />
             ) : (
-              filteredPapers.map((p) => (
-                <PaperCard key={p.pmid || p.title} paper={p} />
+              filteredPapers.map((p, i) => (
+                <div
+                  key={p.pmid || p.title}
+                  className="rise-in"
+                  style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
+                >
+                  <PaperCard paper={p} />
+                </div>
               ))
             )}
           </div>
@@ -141,16 +174,27 @@ export default function App() {
             {filteredTrials.length === 0 ? (
               <EmptyState text="当前筛选条件下暂无临床试验" />
             ) : (
-              filteredTrials.map((t) => (
-                <TrialCard key={t.nctId} trial={t} />
+              filteredTrials.map((t, i) => (
+                <div
+                  key={t.nctId}
+                  className="rise-in"
+                  style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
+                >
+                  <TrialCard trial={t} />
+                </div>
               ))
             )}
           </div>
         )}
       </main>
 
-      <footer className="pb-8 text-center text-[11px] text-slate-600">
-        瑞金医院肿瘤内科 · RJ-Onc Radar · 零服务器成本 PWA
+      <footer className="px-4 pb-10 text-center">
+        <div className="mx-auto mb-3 h-px max-w-[120px] bg-gradient-to-r from-transparent via-slate-600 to-transparent" />
+        <p className="text-[11px] leading-relaxed text-slate-500">
+          上海交通大学医学院附属瑞金医院 · 肿瘤内科
+          <br />
+          RJ-Onc Radar · 科研追踪 PWA
+        </p>
       </footer>
     </div>
   )
@@ -170,10 +214,10 @@ function TabButton({
       type="button"
       onClick={onClick}
       className={[
-        'flex-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+        'flex-1 rounded-lg px-3 py-2.5 text-sm font-medium transition-all',
         active
-          ? 'bg-sky-500/20 text-sky-300 ring-1 ring-sky-400/40'
-          : 'bg-slate-800/50 text-slate-400 ring-1 ring-slate-700/60',
+          ? 'bg-sky-500/20 text-sky-200 shadow-sm ring-1 ring-sky-400/40'
+          : 'text-slate-400 hover:text-slate-200',
       ].join(' ')}
     >
       {label}
@@ -183,7 +227,7 @@ function TabButton({
 
 function EmptyState({ text }: { text: string }) {
   return (
-    <div className="rounded-xl bg-[#1e293b] px-4 py-10 text-center text-sm text-slate-400 ring-1 ring-slate-700/60">
+    <div className="rise-in rounded-2xl bg-[#1e293b]/80 px-4 py-12 text-center text-sm text-slate-400 ring-1 ring-slate-700/60">
       {text}
     </div>
   )

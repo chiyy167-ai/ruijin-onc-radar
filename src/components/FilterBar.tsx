@@ -21,8 +21,8 @@ function ChipRow({
   activeClass: string
 }) {
   return (
-    <div className="mb-2 last:mb-0">
-      <div className="mb-1.5 px-1 text-[11px] font-medium uppercase tracking-wider text-slate-500">
+    <div className="mb-2.5 last:mb-0">
+      <div className="mb-1.5 px-1 text-[11px] font-medium tracking-[0.16em] text-slate-500">
         {label}
       </div>
       <div className="chip-scroll flex gap-2 overflow-x-auto pb-0.5">
@@ -34,11 +34,11 @@ function ChipRow({
               type="button"
               onClick={() => onChange(opt.key)}
               className={[
-                'shrink-0 rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors',
+                'shrink-0 rounded-full px-3.5 py-1.5 text-xs font-medium transition-all',
                 'border focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/60',
                 active
-                  ? activeClass
-                  : 'border-slate-600/80 bg-slate-800/60 text-slate-300 active:bg-slate-700',
+                  ? `${activeClass} shadow-sm`
+                  : 'border-slate-600/70 bg-slate-800/50 text-slate-300 active:scale-[0.98] active:bg-slate-700',
               ].join(' ')}
             >
               {opt.label}
@@ -57,7 +57,7 @@ export default function FilterBar({
   onTypeChange,
 }: FilterBarProps) {
   return (
-    <div className="sticky top-0 z-30 border-b border-slate-700/80 bg-slate-950/95 backdrop-blur-md safe-top">
+    <div className="sticky top-0 z-30 border-b border-slate-700/70 bg-[#0b1220]/88 backdrop-blur-xl safe-top">
       <div className="mx-auto max-w-3xl px-3 py-3">
         <ChipRow
           label="疾病部位"
