@@ -1,0 +1,1341 @@
+{
+  "updatedAt": "2026-10-10 02:14 UTC",
+  "papers": [
+    {
+      "pmid": "42854075",
+      "title": "Analysis of a case of immune-related pancreatitis induced by anti-PD-1 antibody therapy for gastric cancer: A case report.",
+      "journal": "Medicine",
+      "abstract": "Immune-related pancreatitis is a rare but clinically significant adverse event associated with immune checkpoint inhibitor therapy. Early recognition and appropriate management are essential to prevent potentially serious outcomes. Herein, we report a case of suspected immune-related pancreatitis during nivolumab-based immunotherapy for metastatic gastric cancer. An 82-year-old female patient, post-gastrectomy for gastric cancer with subsequent cerebral metastases, multiple leptomeningeal metastases, subcutaneous metastases, and retroperitoneal lymph node metastases, received \"nivolumab + apatinib\" therapy for 4 cycles. On the second day of the fourth cycle of treatment, the patient developed mild epigastric pain, acid regurgitation, and elevated pancreatic enzyme levels, suggestive of immune-related pancreatitis. Alternative etiologies, including biliary disease, alcohol use, and hypertriglyceridemia, were excluded. The patient was classified as Grade 1 according to the Common Terminology Criteria for Adverse Events v5.0 and was managed with fasting, parenteral nutrition, octreotide, enzyme inhibition, and electrolyte balance adjustment. Pancreatic enzyme levels normalized, and symptoms resolved. Nivolumab and apatinib were subsequently withheld. This case highlights that immune-related pancreatitis may present with only mild abdominal symptoms despite marked pancreatic enzyme elevation during immune checkpoint inhibitor therapy. Clinicians should maintain a high index of suspicion for pancreatic immune-related adverse events, even in the absence of typical imaging findings, and systematically exclude alternative causes to ensure timely and appropriate management.",
+      "date": "2026-10-09",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42854075/",
+      "meshTerms": [
+        "Humans",
+        "Female",
+        "Aged, 80 and over",
+        "Stomach Neoplasms",
+        "Pancreatitis",
+        "Immune Checkpoint Inhibitors",
+        "Nivolumab",
+        "Programmed Cell Death 1 Receptor",
+        "Antineoplastic Agents, Immunological"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Case Reports"
+      ],
+      "categories": {
+        "disease": [
+          "gastric"
+        ],
+        "studyType": [
+          "immunotherapy",
+          "diagnosis",
+          "surgery"
+        ]
+      }
+    },
+    {
+      "pmid": "42853421",
+      "title": "Computational modeling and expression of recombinant interleukin 15-R-Tf-D-LP4 peptide fusion protein: a potent candidate for hepatocellular carcinoma.",
+      "journal": "Biotechnology letters",
+      "abstract": "Development of therapies that selectively inhibit cancer cells but leave normal cells untouched is an important impediment to progress in cancer therapy. This paper reports the novel strategy employing the R-Tf-D-LP4 peptide, an unconventional cell penetrating peptide selectively targeting liver cancer cells, combined with the potent antitumor cytokine interleukin 15 (IL-15), with selective activity towards liver cancer cells. The fusion protein was constructed as a chimera between the IL-15 and the targeting peptide R-Tf-D-LP4 to improve the targeting specificity of this protein to the desired cells. With the help of modern computer modeling technologies, a fusion protein was designed, and its interactions with the IL-15 receptor complex (IL-15Rα/IL-15Rβ/γc) were evaluated using a molecular docking technique. The structure and physicochemical properties of the chimeric protein were determined using programs such as trROSETTA, I-TASSER, and ProtParam, after which they were further verified using SAVES 6.1 server with an excellent ERRAT quality score of 99.35%. Molecular docking using ClusPro 2.0, along with interaction evaluation using PDBsum program, demonstrated stability of the complex and strong hydrogen bonds and salt bridge interactions. The results were verified using the Desmond module in Schrödinger software to simulate molecular dynamics, which revealed a stable structure and proper functioning of the complex in physiological conditions. The expression analysis forecasted good yields from E. coli fermentation. The construct of the IL15/R-Tf-D-LP4 protein gene was created and inserted into the pET-22b ( +) vector, which was then transformed in BL21 (DE3) cells. The recombinant fusion protein was obtained by affinity chromatography and tested for purity by SDS-PAGE and western blotting. Cytotoxicity activity of the fusion protein was evaluated against the HepG2 cell line with the MTT test. As a result, the cytotoxic effect with an IC50 value of 23 μg/ml was established, compared to the non-chimera protein's IC50 value of 62 μg/ml. The achieved results allow us to speak about the prospects of using IL-15/R-Tf-D-LP4 fusion protein for clinical purposes in the future.",
+      "date": "2026-10-09",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42853421/",
+      "meshTerms": [
+        "Recombinant Fusion Proteins",
+        "Humans",
+        "Interleukin-15",
+        "Liver Neoplasms",
+        "Molecular Docking Simulation",
+        "Carcinoma, Hepatocellular",
+        "Antineoplastic Agents",
+        "Peptides"
+      ],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "hepatic"
+        ],
+        "studyType": [
+          "diagnosis",
+          "basic_research"
+        ]
+      }
+    },
+    {
+      "pmid": "42853287",
+      "title": "External validation of the Pre-operative Predictive (PROP) score for feasibility of complete cytoreduction in colorectal peritoneal metastases: a single-centre experience.",
+      "journal": "Langenbeck's archives of surgery",
+      "abstract": "Colorectal peritoneal metastases (PM) remain a major therapeutic challenge. Cytoreductive surgery (CRS) combined with hyperthermic intraperitoneal chemotherapy (HIPEC) offers prolonged survival in selected patients. Accurate preoperative assessment of resectability is crucial to avoid non-beneficial surgery. The Preoperative Predictive Score (PROP) integrates nine preoperative clinical and radiologic parameters to predict the completeness of cytoreduction (CC). This study aimed to externally validate the PROP Score in an independent European single-centre cohort. 63 Patients undergoing CRS ± HIPEC for colorectal PM between 2012 and 2022 were retrospectively analysed. PROP scores were calculated from preoperative data and compared with intraoperative CC scores (CC-0, CC-1, CC-2/3). Statistical analysis included χ², Spearman correlation, and receiver operating characteristic (ROC) curve evaluation. Sixty-three patients were included (CC-0 = 41; CC-1 = 13; CC-2/3 = 9). Median PROP values increased with lower resectability (3.4 vs. 7.2 vs. 10.8; p < 0.001). A cutoff ≥ 6 predicted incomplete cytoreduction with 78% sensitivity and 90% specificity (AUC = 0.919). PROP correlated strongly with the Peritoneal Cancer Index (ρ = 0.673; p < 0.001). No 30- or 90-day mortality was observed. The PROP Score reliably predicts the likelihood of complete cytoreduction in colorectal PM using solely preoperative parameters. Moreover it is the first score which is able to preoperatively discriminate patients with a future CC-0 und CC-1 resection. Its external validation supports evidence-based patient selection for CRS ± HIPEC, optimizing surgical decision-making and resource utilization.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42853287/",
+      "meshTerms": [
+        "Humans",
+        "Peritoneal Neoplasms",
+        "Female",
+        "Colorectal Neoplasms",
+        "Cytoreduction Surgical Procedures",
+        "Male",
+        "Retrospective Studies",
+        "Middle Aged",
+        "Hyperthermic Intraperitoneal Chemotherapy",
+        "Aged",
+        "Feasibility Studies",
+        "Predictive Value of Tests",
+        "Adult",
+        "Preoperative Care",
+        "Combined Modality Therapy"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Validation Study"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal"
+        ],
+        "studyType": [
+          "drug_therapy",
+          "surgery"
+        ]
+      }
+    },
+    {
+      "pmid": "42853071",
+      "title": "The early-onset pancreatic cancer paradox: a systematic review and meta-analysis.",
+      "journal": "Journal of the National Cancer Institute",
+      "abstract": "Globally, the rate of early-onset pancreatic cancer (EOPC) is increasing, but its clinical features and outcomes relative to average-onset pancreatic cancer (AOPC) remain uncertain. We compared clinicopathological features, treatment patterns, and survival outcomes. PubMed, Embase, Web of Science, the Cochrane Library, and Scopus were searched through January 2026 (PROSPERO: CRD420261346604). Observational studies comparing EOPC with AOPC using age-based thresholds were included. Study quality was assessed with the Newcastle-Ottawa Scale and ROBINS-E. Hazard and odds ratios were pooled using random-effects models for 39 outcomes across 9 predefined PROSPERO domains. All tests were two-sided. Certainty was assessed using GRADE. Forty-eight studies from 15 countries were included, encompassing 1,659,432 patients (non-overlapping estimate: 695,936). EOPC patients had a lower prevalence of diabetes (odds ratio [OR], 0.39; 95% confidence interval [CI], 0.21 to 0.72), more advanced disease (stage IV: OR, 1.18; 95% CI, 1.02 to 1.36), and higher chemotherapy utilization (OR, 2.04; 95% CI, 1.69 to 2.45; P < .001). Overall survival was comparable (hazard ratio, 1.03; 95% CI, 0.86 to 1.23; P = .76; prediction interval, 0.50 to 2.12). Exploratory dose-response meta-regression suggested a nonlinear (U-shaped) association between age threshold and survival (P = .008). GRADE certainty was very low for all outcomes. Patients with EOPC present with more advanced disease, receive more aggressive treatment, and achieve comparable survival, although certainty is very low. These findings support equitable access to intensive multimodal therapy and germline testing before age 50; however, stage-specific survival data are required to confirm these observations.",
+      "date": "2026-10-09",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42853071/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "pancreatic"
+        ],
+        "studyType": [
+          "drug_therapy",
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42853034",
+      "title": "Building Engagement Using Financial Incentives for Colorectal Cancer Screening (BENEFIT-C) in a Rural Louisiana Federally Qualified Health Center.",
+      "journal": "Health services research",
+      "abstract": "To evaluate the preliminary effectiveness and feasibility of a community-engaged financial incentive intervention for increasing colorectal cancer (CRC) screening in a rural, low-resource primary care setting. A feasibility pilot trial at a federally qualified health center in the Acadiana region, Louisiana. Participants were identified via electronic health records (EHR), recruited by telephone, and randomized to intervention (n = 25) or control (n = 25). Both groups received incentives for flu and COVID-19 vaccines. The intervention group also received incentives for CRC screening. Fisher's Exact tests evaluated between-group differences in completion of CRC screening (primary outcome), flu, and COVID-19 vaccines 2 months post-enrollment. Eligible patients were aged 45-75, due for CRC screening, and English-speaking. From November 11, 2023 to March 31, 2024, completion of each outcome was obtained from the EHR. 57% of interested individuals were eligible; 94% of eligible individuals enrolled. Participants were 70% female, 42% Black, 24% uninsured, with a mean age of 52.4 years. Completion of CRC screening was higher in the intervention versus control group (17 [68%] vs. 8 [32%], p = 0.02). Financial incentives significantly increased completion of CRC screening. Future research should confirm findings in larger samples and evaluate cost-effectiveness to inform health system policies.",
+      "date": "2026-04-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42853034/",
+      "meshTerms": [
+        "Humans",
+        "Female",
+        "Louisiana",
+        "Colorectal Neoplasms",
+        "Middle Aged",
+        "Early Detection of Cancer",
+        "Motivation",
+        "Aged",
+        "Male",
+        "Pilot Projects",
+        "Feasibility Studies",
+        "Rural Population"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Randomized Controlled Trial"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal"
+        ],
+        "studyType": [
+          "clinical_trial"
+        ]
+      }
+    },
+    {
+      "pmid": "42852861",
+      "title": "Extranodal Extension in Colorectal Cancer: Association With Nodal Burden and Disease Recurrence.",
+      "journal": "International journal of surgical pathology",
+      "abstract": "BackgroundExtranodal extension, defined as tumor invasion beyond the lymph node capsule into perinodal adipose tissue, has been associated with adverse outcomes in several malignancies but is not included in the AJCC-TNM staging system for colorectal cancer. This study evaluated the clinicopathological and prognostic significance of extranodal extension and its extent in lymph node-positive colorectal carcinoma.MethodsSixty-nine patients who underwent curative-intent resection for lymph node-positive colorectal carcinoma were retrospectively analyzed. Patients were classified according to the presence of extranodal extension, and extranodal extension-positive tumors were further categorized as limited (<1 mm) or extensive (≥1 mm). Associations with clinicopathological variables and survival outcomes were analyzed using Cox proportional hazards regression models.ResultsExtranodal extension was identified in 29 patients (42%) and was associated with a higher metastatic lymph node count, higher N stage, and an increased incidence of distant metastasis (all P < .05). In multivariate analysis adjusted for T stage, N stage, and postoperative adjuvant chemotherapy, extranodal extension remained independently associated with shorter disease-free survival (hazard ratio 2.65; 95% confidence interval 1.10-6.38; P = .031). Extranodal extension was not independently associated with overall survival. Although the extent of extranodal extension correlated with nodal burden, it was not independently associated with survival outcomes.ConclusionExtranodal extension is associated with increased nodal tumor burden and independently predicts shorter disease-free survival in colorectal carcinoma. Routine assessment and reporting of extranodal extension may improve pathological risk stratification.",
+      "date": "2026-10-09",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42852861/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal"
+        ],
+        "studyType": [
+          "drug_therapy",
+          "surgery"
+        ]
+      }
+    },
+    {
+      "pmid": "42852758",
+      "title": "FZD10 and Diseases: From Molecular Mechanisms to the Potential of Targeted Therapy.",
+      "journal": "Current pharmaceutical design",
+      "abstract": "Frizzled class receptor 10 (FZD10) is a member of the Frizzled family of seven-transmembrane receptors. It mediates Wnt signaling through both canonical (β-catenin) and non-canonical (planar cell polarity and Ca²⁺) pathways, thereby regulating cell proliferation, differentiation, migration, apoptosis, and stem cell self-renewal. Dysregulation of FZD10-resulting from altered expression, aberrant promoter methylation, or functional impairment-has been linked to multiple human diseases, including cancers, metabolic and inflammatory disorders, and neurodegenerative conditions. In malignant tumors, FZD10 shows tissue-specific oncogenic activity. It is overexpressed in synovial sarcoma, colorectal cancer, gastric cancer, hepatocellular carcinoma, cervical cancer, ovarian cancer, nasopharyngeal carcinoma, non-small cell lung cancer, and renal cell carcinoma, but downregulated in esophageal squamous cell carcinoma. This restricted expression pattern makes FZD10 a potential biomarker for diagnosis and prognosis, as well as a candidate for targeted therapy. This review summarizes current knowledge on FZD10, covering its gene and protein structure, signaling mechanisms, and roles in various diseases. We also discuss its diagnostic and prognostic value in different cancers, and review recent progress in FZD10-targeted strategies, including antibodies, radioimmunotherapy, small-molecule inhibitors, drug repurposing, exosome-based delivery, and gene editing. Current limitations, such as the context-dependent functions of FZD10 and the safety issues associated with targeted agents, are also discussed. Future studies are needed to clarify the mechanistic basis of FZD10 action and to develop biomarkers for patient stratification.",
+      "date": "2026-09-30",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42852758/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "gastric",
+          "colorectal",
+          "hepatic"
+        ],
+        "studyType": [
+          "drug_therapy",
+          "immunotherapy",
+          "biomarker",
+          "diagnosis",
+          "basic_research"
+        ]
+      }
+    },
+    {
+      "pmid": "42852747",
+      "title": "Radiomics Model Based on Gd-DTPA-enhanced Multiparametric MRI Supports Noninvasive Pretreatment Prediction of Immunoscore in Hepatocellular Carcinoma.",
+      "journal": "Current medical imaging",
+      "abstract": "This study assessed whether Gd-DTPA-enhanced MRI could predict the immunoscore in HCC noninvasively before therapy, without the need for tissue sampling. Retrospectively, surgically treated HCC patients who had a preoperative Gd-DTPA-enhanced MRI exam were enrolled. Eligible patients were randomly allocated to a training set and a validation set following a 3:1 randomization scheme. Immunohistochemistry was performed to quantify CD3-positive and CD8-positive cell densities; patients were stratified into high and low immunoscore groups using the median cutoff. Volumes of interest encompassing hepatic lesions, including intratumoral and peritumoral 10-mm margins, were manually delineated on multiparametric MRI sequences for radiomics feature extraction. Clinical and pathological data were retrieved from electronic medical records. A Support Vector Machine (SVM) was used to develop three predictive models: (1) Intratumoral Radiomics Model (IRM), (2) combined intra- and peritumoral radiomics model (CRM), and (3) Clinical Combined Radiomics Model (CCRM). Model performance was compared using the DeLong test and evaluated via the area under the receiver operating characteristic curve (AUC), calibration curves, and Decision Curve Analysis (DCA). Of 111 eligible patients, 83 were assigned to the training cohort and 28 to the validation cohort. Baseline characteristics were balanced between cohorts. The CCRM demonstrated the highest AUC values in both cohorts (training: 0.947; validation: 0.913). Compared with IRM, CCRM showed significantly better performance in the validation cohort (p = 0.016) but not in the training cohort (p = 0.084). In the validation cohort, CCRM did not significantly outperform CRM (p = 0.55), whereas a significant difference was observed in the training cohort (p = 0.036). Calibration curves demonstrated good agreement. DCA indicated that the CCRM and the CRM achieved similar overall net benefits, which were higher than those of the IRM across threshold probabilities of 46% to 98%. This radiomics approach suggests the feasibility of using routine Gd-DTPA-enhanced MRI for preoperative immunoscore prediction in HCC, providing preliminary evidence for tumor immune characterization. A radiomics model integrating intra- and peritumoral MRI features enables noninvasive preoperative immunoscore prediction in HCC, which may provide preliminary support for individualized immunotherapy decision-making, although external validation is warranted.",
+      "date": "2026-09-30",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42852747/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "hepatic"
+        ],
+        "studyType": [
+          "immunotherapy",
+          "diagnosis"
+        ]
+      }
+    },
+    {
+      "pmid": "42852714",
+      "title": "Outcomes of Percutaneous Transhepatic Biliary Drainage in Patients With Malignant Biliary Obstruction Receiving Palliative Care.",
+      "journal": "The American journal of hospice & palliative care",
+      "abstract": "IntroductionMalignant biliary obstruction (MBO) is a common complication of advanced hepatopancreaticobiliary cancers, often presenting with jaundice, functional decline, and high symptom burden that significantly impairs quality of life. Percutaneous transhepatic biliary drainage (PTBD) is frequently used to relieve MBO when endoscopic drainage is not feasible, including patients receiving palliative care. However, evidence on clinical outcomes in palliative care populations remains limited.AimTo evaluate short-term clinical outcomes of PTBD in patients with advanced MBO receiving palliative care, focusing on 90-day mortality, clinical success, symptom control, functional status, procedure-related complications, reintervention, and access to chemotherapy.MethodsThis single-cohort, descriptive observational study included patients with MBO who underwent PTBD between 2022 and 2024. Patients were followed for 90 days after the procedure. Functional status was assessed using the Karnofsky Performance Status (KPS), and symptom burden was evaluated using the Edmonton Symptom Assessment System (ESAS).ResultsSeventy-four patients were included (mean age: 65.5 years; 55.4% male). The most frequent malignancies were pancreatic cancer and cholangiocarcinoma. 90 days mortality after the procedure was 74.3%. Clinical success was achieved in 55.4% of cases. Symptomatic relief was observed for pruritus (95%) and pain (89%), although functional decline was noted. Procedure-related complications occurred in 23.0% of patients, and 43.2% required reintervention.ConclusionsPTBD provided symptomatic relief; however, functional status declined and short-term mortality was high, consistent with the advanced disease stage of this cohort. These findings underscore the importance of individualized, comfort-focused decision-making aimed at optimizing symptom control and quality of life in palliative care patients.",
+      "date": "2026-10-09",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42852714/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "pancreatic"
+        ],
+        "studyType": [
+          "drug_therapy"
+        ]
+      }
+    },
+    {
+      "pmid": "42852635",
+      "title": "cGAS‑STING pathway in digestive tract cancer: From molecular mechanisms to therapeutic applications (Review).",
+      "journal": "International journal of oncology",
+      "abstract": "As a classic cytosolic DNA sensor, the cyclic GMP‑AMP synthase (cGAS)‑stimulator of interferon genes (STING) pathway contributes to the secretion of multiple inflammatory molecules and functions as a suppressor or promoter in tumor development. Currently, the effect of this pathway on digestive tract cancer types remains unclear, which may be due to its paradoxical roles in different cell types. Tumor cells in digestive cancer often employ multiple mechanisms to inhibit this pathway activation, which then restricts the infiltration of antitumor immune cells and facilitates the formation of an immunosuppressive microenvironment. However, cGAS‑STING pathway activation also influences the function of multiple immune cells. For example, while it mainly potentiates the function of dendritic cells and natural killer cells in the tumor microenvironment, it can also promote macrophage polarization into the immunosuppressive M2 subset. To improve the understanding of the cGAS‑STING pathway in digestive cancer types, the present article systematically reviews the regulatory mechanism and effects of this pathway across different malignancies of the digestive system, including oral cavity, esophageal, gastric, hepatobiliary, pancreatic and colorectal cancer. Furthermore, the present review examines potential stimulatory strategies and future directions to utilize this pathway against tumors, such as inducing DNA damage, removing cell‑intrinsic inhibitory signals and direct activation by agonists. Overall, the present review aims to provide new perspectives and ideas for leveraging the cGAS‑STING pathway to exert antitumor effects by highlighting the changes and roles of this pathway in digestive tract cancer types.",
+      "date": "2026-11-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42852635/",
+      "meshTerms": [
+        "Humans",
+        "cGAS-STING Signaling Pathway",
+        "Nucleotidyltransferases",
+        "Membrane Proteins",
+        "STING Protein",
+        "Tumor Microenvironment",
+        "Cyclic Guanosine Monophosphate-Adenosine Monophosphate Synthase",
+        "Gastrointestinal Neoplasms",
+        "Animals",
+        "Signal Transduction"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal"
+        ],
+        "studyType": [
+          "basic_research",
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42852627",
+      "title": "PRMT7 at the crossroads of cancer progression and therapeutic targeting (Review).",
+      "journal": "Oncology reports",
+      "abstract": "Protein arginine methyltransferase 7 (PRMT7), the sole type III PRMT family member, catalyzes arginine monomethylation and has recently emerged as an important regulator of cancer biology. Increasing evidence indicates that PRMT7 participates in tumor initiation and progression through epigenetic regulation, transcriptional control, RNA processing and signaling pathway modulation. Dysregulated PRMT7 expression has been reported in diverse malignancies, including leukemia, breast cancer, lung cancer, renal cell carcinoma, hepatocellular carcinoma, prostate cancer and gastric cancer. Functionally, PRMT7 has been implicated in epithelial‑mesenchymal transition, cancer stemness, metastasis and immune modulation, although its effects may vary depending on cellular and tumor context. The present review summarizes the structural and biochemical features of PRMT7, its mechanistic roles across different cancer types, and its potential as a therapeutic target. Recent progress in PRMT inhibitor development was also discussed, with particular emphasis on PRMT7‑selective compounds such as SGC3027, SGC8158 and JS1310, as well as the key challenges that remain for clinical translation. Elucidating the context‑specific functions and targetable vulnerabilities of PRMT7 may provide new opportunities for precision cancer therapy.",
+      "date": "2026-12-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42852627/",
+      "meshTerms": [
+        "Humans",
+        "Protein-Arginine N-Methyltransferases",
+        "Neoplasms",
+        "Disease Progression",
+        "Gene Expression Regulation, Neoplastic",
+        "Molecular Targeted Therapy",
+        "Epigenesis, Genetic",
+        "Animals",
+        "Antineoplastic Agents",
+        "Signal Transduction",
+        "Epithelial-Mesenchymal Transition",
+        "Enzyme Inhibitors"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "gastric",
+          "hepatic"
+        ],
+        "studyType": [
+          "basic_research",
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42852560",
+      "title": "Cu/SiO2 nanozyme-amplified colorimetric immunosensor for high-fidelity pancreatic cancer detection with software-assisted evaluation.",
+      "journal": "Analytical methods : advancing methods and applications",
+      "abstract": "Pancreatic cancer (PC) remains one of the most lethal malignancies due to the lack of reliable tools for early-stage diagnosis. Therefore, developing highly sensitive and robust detection strategies that accurately quantify CA19-9 in complex biological samples is crucial for improving early diagnostic outcomes. A Cu/SiO2 nanozyme, which exhibits intrinsic peroxidase-mimetic activity, has been utilized for the first time in an immunodetection assay for the sensitive and selective analysis of PC-biomarker CA19-9. Cu/SiO2 nanozyme oxidizes 3,3',5,5'-tetramethylbenzidine (TMB) with hydrogen peroxide (H2O2), producing blue-colored oxTMB with absorbance at 650 nm. An indirect ELISA was performed using a mouse anti-CA19-9 monoclonal antibody (MAC IgG) and a goat anti-mouse IgG secondary antibody (GAM IgG) conjugated to a Cu/SiO2 nanozyme. Cu/SiO2 nanozyme kinetics were performed using Michaelis-Menten and Lineweaver-Burk plots. The obtained parameters were 7.43 × 10-3 M, 8.65 × 10-7 M s-1, and 3.67 × 10-4 s-1 for KM, Vmax, and Kcat, respectively. The developed colorimetric immunoassay demonstrated high sensitivity with a limit of detection (LOD) of 0.000771 U mL-1. The applicability of the developed method was evaluated using human serum samples, achieving 100.18-103.15% recovery. Software-assisted analysis was utilized for rapid detection, achieving an outstanding LOD of 0.00139 U mL-1, respectively. Overall, this developed colorimetric immunoassay demonstrates its applicability for sensitive and clinically relevant detection of the PC biomarker CA19-9.",
+      "date": "2026-10-09",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42852560/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "pancreatic"
+        ],
+        "studyType": [
+          "drug_therapy",
+          "biomarker",
+          "diagnosis"
+        ]
+      }
+    },
+    {
+      "pmid": "42852338",
+      "title": "SNU523 Inhibits Pancreatic Cancer through the Dual Suppression of STAT3 and MEK Signaling Pathways.",
+      "journal": "ACS omega",
+      "abstract": "Pancreatic cancer represents one of the most lethal cancers, characterized by poor survival rates and persistent therapeutic resistance. In this study, we investigated the anticancer potential and underlying mechanism of SNU523 (8-O-demethyl-9,11-didechloropestalone), a compound isolated from the marine-derived fungus Pestalotiopsis neglecta. SNU523 exhibited potent antiproliferative effects, reduced colony formation in PDAC cells, and suppressed tumor growth in a xenograft model. SNU523 demonstrated dual inhibitory activity against the STAT3 and MEK signaling pathways, suggesting the potential for overcoming therapeutic resistance driven by the inverse interplay between these cascades. This dual suppression may be attributed to its modulatory effects on the epidermal growth factor receptor (EGFR) protein and mRNA levels. Taken together, these findings suggest that SNU523 represents a highly promising candidate for targeted therapy against pancreatic cancer, and it merits extensive investigation in both preclinical and clinical settings.",
+      "date": "2026-10-06",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42852338/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "pancreatic"
+        ],
+        "studyType": [
+          "drug_therapy",
+          "basic_research"
+        ]
+      }
+    },
+    {
+      "pmid": "42851820",
+      "title": "Endovascular magnetic filters for removing excess chemotherapeutic drugs from blood flow using dimensionless scaling laws.",
+      "journal": "Bioengineering & translational medicine",
+      "abstract": "Intra-arterial chemotherapy (IAC) for hepatocellular carcinoma (HCC) is limited by the escape of chemotherapeutic agents into systemic circulation, causing severe side effects such as heart failure. This study aims to develop and optimize endovascular magnetic filtration devices to enhance IAC efficacy, by targeted removal of excess drug-coated ultrasmall superparamagnetic iron oxide (USPIO) particles from circulation. Device performance was evaluated through multi-physics simulations that coupled the transport of drug-coated magnetic particles in blood flow with magnetic interactions and magnetophoretic forces. A dimensional analysis framework was applied to characterize particle capture efficiency (  CE   ) across alternative device designs, and numerical predictions were compared with published benchtop experiments. Optimized multi-stage filters achieved up to ~80% predicted capture efficiency, while reducing the risk of intravascular device collapse. These results demonstrate a novel strategy for reducing systemic toxicity in IAC through endovascular magnetic filtration, indicating its potential to improve the safety and effectiveness of HCC treatment.",
+      "date": "2026-10-07",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42851820/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "hepatic"
+        ],
+        "studyType": [
+          "drug_therapy"
+        ]
+      }
+    },
+    {
+      "pmid": "42851668",
+      "title": "A Trojan horse nanoplatform overcoming delivery barriers for targeted gene immunotherapy of colorectal cancer.",
+      "journal": "Frontiers in bioengineering and biotechnology",
+      "abstract": "Programmed cell death ligand 1 (PD-L1) antibody has been shown to hold tremendous promise in curing metastatic colorectal cancer (CRC). However, the delivery efficacy of the targeted biologics limits this immunotherapy in a subset of CRC. Here we report a novel biomimetic 'Trojan horse' nano-delivery system for targeted gene-immunotherapy of colorectal cancer. The system comprises a core of gold nanoparticles and cationic liposomes encapsulating CRISPR/Cas9-sgSOX9, camouflaged with homologous CRC cell membranes for immune evasion and tumor tropism, and functionalized with PD-L1 antibodies to enhance tumor recognition and relieve immune suppression. In vitro, the nano-system potently suppressed CRC cell proliferation, migration and invasion. in vivo, it exhibited robust tumor-targeting specificity, favorable preliminary biosafety profile and marked inhibition of tumor growth in subcutaneous xenograft models. Mechanistically, the system remodeled the tumor microenvironment by promoting CD8+ T-cell infiltration and elevating effector cytokines IFN-γ and TNF-α. By seamlessly coupling precise gene delivery with potent immune activation, this nanoplatform offers a compelling therapeutic strategy for colorectal cancer therapy.",
+      "date": "2026-01-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42851668/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal"
+        ],
+        "studyType": [
+          "immunotherapy",
+          "basic_research"
+        ]
+      }
+    },
+    {
+      "pmid": "42851664",
+      "title": "Adjuvant immunotherapy versus observation after neoadjuvant therapy and esophagectomy for esophageal cancer with residual pathologic disease: a systematic review and reconstructed individual participant data meta-analysis.",
+      "journal": "Frontiers in immunology",
+      "abstract": "The role of adjuvant immunotherapy after neoadjuvant therapy and esophagectomy remains uncertain. We examined its association with survival in populations composed predominantly of patients with residual disease across neoadjuvant strategies. This systematic review included comparative studies of postoperative immunotherapy versus observation or placebo. The majority of the intervention groups received adjuvant immune checkpoint inhibitor (ICI) monotherapy, while three cohorts included patients treated with concomitant postoperative chemotherapy. The reported hazard ratios (HRs) were synthesized using random-effects models and were estimated from reconstructed Kaplan-Meier data when unavailable. Reconstructed data were also used to generate the survival curves. Bayesian hierarchical models and sensitivity analyses assessed robustness. A total of 13 studies, including two randomized trials and 11 retrospective cohorts, were included. The overall survival (OS) data came from 12 studies with 4,225 patients, while the disease-free or recurrence-free survival (DFS/RFS) data were from 11 studies with 2,363 patients. Postoperative immunotherapy was associated with longer OS [HR = 0.64, 95% confidence interval (CI) = 0.53-0.77] and DFS/RFS (HR = 0.74, 95%CI = 0.66-0.84). The associations were favorable after neoadjuvant chemoradiotherapy (NCRT), chemoimmunotherapy (NCIT), and chemotherapy (NCT). Interaction testing was significant for OS, but not for DFS/RFS. The paradigm estimates were not direct comparisons as the histology, geography, and study design differed across strategies. Sensitivity analyses addressing residual disease eligibility and postoperative treatment composition yielded similar average estimates. Analyses restricted to studies with aligned postoperative time origins remained directionally favorable, but were based on only a few studies. The Bayesian pooled estimates were concordant, although the predictive intervals crossed 1 for both outcomes. Certainty was low. Randomized evidence supports a DFS benefit from adjuvant immunotherapy after NCRT. However, a statistically significant randomized OS benefit has not been demonstrated. The associations after NCIT were favorable, but entirely observational. The favorable estimates after NCT were based on only two small retrospective studies, while mixed neoadjuvant treatment was represented by a single study with imprecise estimates. The esophageal squamous cell carcinoma (ESCC)-predominant and residual pathology findings were exploratory. Further randomized studies are needed to define the role of postoperative immunotherapy after NCIT or NCT and to determine whether pathologic features can inform patient selection. https://www.crd.york.ac.uk/PROSPERO/, identifier CRD420261384875.",
+      "date": "2026-01-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42851664/",
+      "meshTerms": [
+        "Humans",
+        "Esophageal Neoplasms",
+        "Neoadjuvant Therapy",
+        "Esophagectomy",
+        "Neoplasm, Residual",
+        "Immunotherapy",
+        "Chemotherapy, Adjuvant",
+        "Treatment Outcome",
+        "Immune Checkpoint Inhibitors"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Comparative Study"
+      ],
+      "categories": {
+        "disease": [
+          "esophageal"
+        ],
+        "studyType": [
+          "clinical_trial",
+          "drug_therapy",
+          "immunotherapy",
+          "surgery",
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42851630",
+      "title": "Real-world outcomes of atezolizumab-bevacizumab and durvalumab-tremelimumab in unresectable hepatocellular carcinoma: a systematic review with covariate-adjusted meta-regression and exploratory machine learning analysis.",
+      "journal": "Frontiers in immunology",
+      "abstract": "Atezolizumab-bevacizumab (AB) and durvalumab-tremelimumab (DT) are standard first-line therapies for unresectable hepatocellular carcinoma (uHCC), but their comparative effectiveness remains uncertain. We included 76 observational reports comprising 10,243 patients. Report-level median survival was summarized descriptively, whereas objective response rate (ORR) and disease control rate (DCR) were synthesized using random-effects models. Covariate-adjusted meta-regression was the principal adjusted analysis, and adverse events were summarized descriptively. An exploratory prediction analysis using leakage-free nested cross-validation was performed, with an S-learner as the primary model and T-learners only as supporting analyses. The evidence base comprised 60 AB reports (8,928 patients) and 16 DT reports (1,315 patients). For median overall survival (mOS), the sample size-weighted means were 17.7 months for AB and 16.5 months for DT; the corresponding medians of report-level medians were 17.1 and 13.8 months, respectively. These survival summaries were descriptive and were not formally compared. Random-effects pooled ORR was 26.6% for AB and 20.8% for DT, and pooled DCR was 71.4% and 55.4%, respectively. In covariate-adjusted meta-regression, the AB-DT differences were +3.57 months for mOS (95% CI, -0.38 to +7.52; P = 0.076), +1.96 months for median progression-free survival (mPFS) (+0.91 to +3.02; P < 0.001), +2.95 percentage points for ORR (-2.65 to +8.54; P = 0.302), and +16.15 points for DCR (+10.44 to +21.86; P < 0.001). The mPFS association was not reproduced in first line-predominant cohorts (+1.35 months, -0.33 to +3.04; P = 0.116) and attenuated after the simultaneous exclusion of four reports with unresolved overlap (+1.69 months, +0.31 to +3.07; P = 0.016). In available aggregate real-world data, AB cohorts reported higher median PFS and disease control than DT cohorts, whereas OS could not be reliably compared. Marked differences in treatment line, age, calendar period, and covariate support, together with the small DT evidence base, preclude reliable comparative-effectiveness inference. https://www.crd.york.ac.uk/PROSPERO/view/CRD420251141735, identifier CRD420251141735.",
+      "date": "2026-01-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42851630/",
+      "meshTerms": [
+        "Humans",
+        "Liver Neoplasms",
+        "Carcinoma, Hepatocellular",
+        "Antibodies, Monoclonal, Humanized",
+        "Antibodies, Monoclonal",
+        "Bevacizumab",
+        "Antineoplastic Combined Chemotherapy Protocols",
+        "Machine Learning",
+        "Treatment Outcome"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "categories": {
+        "disease": [
+          "hepatic"
+        ],
+        "studyType": [
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42851515",
+      "title": "A trivalent gastric cancer antigen conjugated to a diphtheria toxin epitope synergizes with an NKT cell agonist to boost antitumor immunity.",
+      "journal": "Frontiers in immunology",
+      "abstract": "The gastric cancer-associated antigen MG7-Ag is aberrantly expressed in multiple gastrointestinal malignancies and represents a promising broad-spectrum target for pan-gastrointestinal tumor peptide vaccines; however, its clinical application is hampered by low immunogenicity. To overcome this limitation, we covalently conjugated a diphtheria toxin-derived T-helper epitope to the trivalent antigen MG3, which was constructed by tandem repetition of the monovalent MG1 peptide from the MG7-Ag. A liposomal vaccine was subsequently developed by incorporating DT-MG3 together with the natural killer T (NKT) cell agonist α-galactosylceramide (αGalCer). Immunological evaluation demonstrated that DT-MG3 plus αGalCer elicited significantly higher specific IgG titers than DT-MG3 alone or the unconjugated MG3/αGalCer combination. The vaccine also promoted IFN-γ/IL-4 secretion and boosted CD4+/CD8+ T cell responses to elevate antigen immunogenicity. Moreover, the high-titer specific antibodies induced by the vaccine also efficiently bound to EAC tumor cells and induced complement-dependent cytotoxicity. In the EAC ascites model, vaccination with DT-MG3/αGalCer substantially reduced malignant ascites accumulation and prolonged the survival of tumor-bearing mice. Collectively, this novel anti-gastric cancer vaccine based on the covalent conjugation of a diphtheria toxin epitope to the trivalent MG3 antigen, provides valuable insights for the rational design of potent and safe fully synthetic peptide-based anti-tumor vaccines.",
+      "date": "2026-01-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42851515/",
+      "meshTerms": [
+        "Animals",
+        "Diphtheria Toxin",
+        "Cancer Vaccines",
+        "Mice",
+        "Stomach Neoplasms",
+        "Galactosylceramides",
+        "Antigens, Neoplasm",
+        "Natural Killer T-Cells",
+        "Protein Subunit Vaccines",
+        "Female",
+        "Cell Line, Tumor",
+        "Humans",
+        "Epitopes",
+        "Epitopes, T-Lymphocyte",
+        "Mice, Inbred C57BL"
+      ],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "gastric"
+        ],
+        "studyType": [
+          "diagnosis",
+          "basic_research"
+        ]
+      }
+    },
+    {
+      "pmid": "42851468",
+      "title": "Engineered bacteria and engineered probiotics for intestinal disease therapy: a bibliometric and knowledge mapping analysis.",
+      "journal": "Frontiers in microbiology",
+      "abstract": "Engineered bacteria and engineered probiotics are emerging living therapeutic platforms for intestinal diseases, supported by advances in synthetic biology, genetic engineering, and microbiome technologies. This study aimed to characterize the research landscape, knowledge structure, research hotspots, and emerging trends of engineered bacteria and engineered probiotics for intestinal disease therapy using bibliometric and knowledge mapping approaches. Publications were retrieved from the Web of Science Core Collection and Scopus databases. After publication type restriction, thematic relevance screening, database merging, and duplicate removal, 499 publications published between 2015 and 2026 were included. The search was completed on July 3, 2026; therefore, records from 2026 represent a partial-year dataset. R, Python, VOSviewer, and CiteSpace were used to analyze annual publication trends, country/region, institution, author and journal distributions, keyword co-occurrence and bursts, co-cited references, and research frontiers. Publication output increased markedly over the study period, reaching 109 publications in 2025; 64 records were retrieved for 2026 by the cutoff date. China had the highest publication output, whereas the United States had the highest total link strength, and Asia contributed 361 publications. Keyword analysis identified inflammatory bowel disease, gut microbiota, probiotics, engineered bacteria, engineered probiotics, synthetic biology, intestinal barrier, drug delivery, colorectal cancer, and immunotherapy as major research hotspots. Co-cited reference and timeline analyses indicated a shift in research attention from conventional probiotic-mediated anti-inflammatory effects, mucosal immune regulation, and intestinal barrier protection toward bacterial chassis selection, enhanced colonization, self-regulated genetic circuits, probiotic-based biomaterials, sustained-release delivery systems, and engineered bacteria-mediated antitumor therapy. The bibliometric evidence indicates that recent research attention is increasingly focused on programmable living therapeutic strategies. Environmental sensing, local therapeutic delivery, sustained activity, and multifunctional design features are capabilities reported in the underlying literature and represented among the emerging themes identified in this analysis, rather than therapeutic performance directly established by the bibliometric data. Future research should further address biosafety, genetic stability, spatiotemporal controllability, intestinal colonization, delivery efficiency, and clinical translation.",
+      "date": "2026-01-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42851468/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article",
+        "Systematic Review"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal"
+        ],
+        "studyType": [
+          "immunotherapy",
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42851436",
+      "title": "Multimodal characterization of HLA-G expression across solid tumors reveals transcript-protein discordance and implications for immunotherapy targeting.",
+      "journal": "Frontiers in immunology",
+      "abstract": "Human leukocyte antigen-G (HLA-G) is a non-classical major histocompatibility complex class I molecule that functions as an immune checkpoint via inhibitory receptors such as immunoglobulin-like transcript 2 (ILT2), immunoglobulin-like transcript 4 (ILT4) and killer cell immunoglobulin-like receptor 2DL4 (KIR2DL4), suppressing anti-tumor immunity. Its prevalence and regulation across solid tumors remain incompletely defined due to low expression, spatial heterogeneity, and detection challenges. We performed a multimodal target prevalence analysis integrating data from a validated immunohistochemistry (IHC) assay for protein detection and prospective screening data from a phase 1 study of an HLA-G × CD3 T cell bispecific antibody (Clintrials.gov identifier: NCT05769959) with bulk RNA sequencing from early-phase oncology clinical trials. Analysis of 252 patient tumor samples using an investigational HLA-G IHC assay showed that 59.9% were HLA-G positive, with highest prevalence in ovarian cancer (89%), non-small cell lung cancer (NSCLC) (76%), renal cell carcinoma (RCC) (71%), and pancreatic cancer (70%). Expression was generally low to moderate and spatially heterogeneous. Notably, discordance between transcript and protein expression was observed in melanoma, where high mRNA levels were not matched by detectable protein, suggesting post-transcriptional regulation. Prospective screening in a phase 1 cohort confirmed a high target positivity rate (77.5%). At the transcript level, HLA-G expression was enriched in inflamed tumors and correlated with interferon gamma (IFN-γ) signaling, antigen presentation pathways, and effector T-cell markers including cluster of differentiation 8 alpha (CD8A), interferon gamma gene (IFNG) and granzyme B (GZMB). HLA-G appears to be an inducible immune checkpoint associated with IFN-γ-driven immune activation and adaptive resistance. Transcript-protein discordance and spatial heterogeneity highlight the need for protein-level assessment in biomarker development. These findings inform companion diagnostic strategies for HLA-G-directed immunotherapies.",
+      "date": "2026-01-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42851436/",
+      "meshTerms": [
+        "Humans",
+        "HLA-G Antigens",
+        "Neoplasms",
+        "Immunotherapy",
+        "Gene Expression Regulation, Neoplastic",
+        "Interferon-gamma",
+        "Female",
+        "Receptors, Immunologic",
+        "Biomarkers, Tumor",
+        "Antibodies, Bispecific"
+      ],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "pancreatic"
+        ],
+        "studyType": [
+          "clinical_trial",
+          "immunotherapy",
+          "biomarker",
+          "basic_research"
+        ]
+      }
+    },
+    {
+      "pmid": "42851193",
+      "title": "[Guideline for HER2 detection in gastric cancer (2026 version)].",
+      "journal": "Zhonghua bing li xue za zhi = Chinese journal of pathology",
+      "abstract": "",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42851193/",
+      "meshTerms": [
+        "Humans",
+        "Stomach Neoplasms",
+        "Erb-b2 Receptor Tyrosine Kinases"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Practice Guideline"
+      ],
+      "categories": {
+        "disease": [
+          "gastric"
+        ],
+        "studyType": [
+          "biomarker",
+          "guideline"
+        ]
+      }
+    },
+    {
+      "pmid": "42851190",
+      "title": "[New advances in thyroid tumors associated with genetic syndromes].",
+      "journal": "Zhonghua bing li xue za zhi = Chinese journal of pathology",
+      "abstract": "",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42851190/",
+      "meshTerms": [
+        "Humans",
+        "Thyroid Neoplasms",
+        "Hamartoma Syndrome, Multiple",
+        "PTEN Phosphohydrolase",
+        "Ribonuclease III",
+        "DEAD-box RNA Helicases",
+        "Multiple Endocrine Neoplasia Type 2a",
+        "Proto-Oncogene Proteins c-ret",
+        "Adenomatous Polyposis Coli",
+        "Mutation",
+        "Point Mutation"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "other_gi"
+        ],
+        "studyType": [
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42850909",
+      "title": "Molecular Subtypes of Hepatocellular Carcinoma Defined by Anesthesia-Related Drug Target Genes During the Perioperative Period and Their Prognosis, Immunological Characteristics, and Drug Response.",
+      "journal": "Asia-Pacific journal of clinical oncology",
+      "abstract": "The use of perioperative anesthetic drugs may influence the prognosis of cancer patients, but the expression characteristics and clinical significance of their associated target genes in hepatocellular carcinoma (HCC) remain unclear. This study aims to establish a molecular subtyping system based on perioperative anesthesia-related drug target genes (PARDTGs) and systematically evaluate their potential value in HCC prognosis, immune microenvironment, and drug response. To assess HCC prognosis, we established a PAR-DTG Score derived from PARDTGs. Initial screening in the Cancer Genome Atlas Liver Hepatocellular Carcinoma and GSE14520 cohorts employed differential expression analysis, followed by univariate Cox and Least Absolute Shrinkage and Selection Operator regression to identify prognostic genes. Comprehensive characterization of high- and low-risk groups was subsequently performed, integrating immune infiltration analyses, functional enrichment, tumor mutational burden evaluation, and drug sensitivity predictions to elucidate their distinct molecular and clinical features. A prognostic model based on a PARDTG-derived prognostic signature consisting of five genes (CD24, MCM5, PPARGC1A, SLC22A7, and VNN2) was constructed and demonstrated robust predictive performance across two independent cohorts. Patients in the high-risk group exhibited significantly reduced overall survival and enrichment in cell cycle-related pathways (e.g., E2F targets and G2M checkpoint), whereas the low-risk group showed significant enrichment in metabolic pathways (e.g., fatty acid metabolism and bile acid metabolism). Immune microenvironment analysis revealed elevated expression of B cells, CD8+ T cells, and immune checkpoint molecules in the high-risk group, which also demonstrated higher response rates to PD-L1 blockade immunotherapy. Drug sensitivity prediction indicated greater susceptibility to chemotherapy agents such as cisplatin and sorafenib in the high-risk group. The prognostic model constructed based on PAR-DTG Score effectively distinguishes survival risks among HCC patients and reveals its connections with the immune microenvironment, molecular mechanisms, and drug responses, providing preliminary insights for developing personalized treatment strategies.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42850909/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "hepatic"
+        ],
+        "studyType": [
+          "drug_therapy",
+          "immunotherapy",
+          "biomarker",
+          "basic_research"
+        ]
+      }
+    },
+    {
+      "pmid": "42850750",
+      "title": "ALBI-6-A Novel Prognostic Score Combining ALBI and Interleukin-6 in Patients With HCC Treated With Atezolizumab and Bevacizumab.",
+      "journal": "Alimentary pharmacology & therapeutics",
+      "abstract": "Despite widespread use of combination immunotherapy in advanced liver cancer, reliable biomarkers for baseline risk stratification remain lacking. The inflammatory cytokine interleukin-6 has established prognostic relevance in this cancer. We investigated the prognostic value of interleukin-6 and developed a combined score (ALBI-6) integrating interleukin-6 with albumin-bilirubin grade, a marker of liver function. In this multicentre retrospective cohort study, 216 patients with advanced hepatocellular carcinoma treated with first-line atezolizumab plus bevacizumab were analysed. Interleukin-6 was measured at baseline, first response, best response, and progression. The cohort was randomly divided into a training set (n = 98) and a validation set (n = 90). ALBI-6 was derived using Cox regression and evaluated against several established prognostic scores. Elevated baseline interleukin-6 was consistently associated with worse overall survival and remained independently prognostic after adjustment for tumour and clinical factors (extrahepatic spread, vascular invasion, alpha-fetoprotein, performance status, liver function class). In the validation cohort, ALBI-6 achieved a concordance index of 0.716 and separated patients into three risk groups with significantly different survival (log-rank p = 0.002); ALBI-6 was significantly more discriminative than one comparator score (modified albumin-bilirubin grade, p = 0.040), with numerically higher performance than the remaining comparators. In a separate analysis of the full cohort, ALBI-6 significantly outperformed the CRAFITY score at all assessed time points. Bootstrap validation confirmed model stability. ALBI-6 integrates systemic inflammation and liver function into a simple composite index enabling meaningful risk stratification in patients with advanced hepatocellular carcinoma treated with immunotherapy. Prospective external validation is warranted.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42850750/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "hepatic"
+        ],
+        "studyType": [
+          "immunotherapy",
+          "biomarker"
+        ]
+      }
+    },
+    {
+      "pmid": "42850302",
+      "title": "Indocyanine green-guided lymphadenectomy and survival of patients with gastric cancer: a systematic review and meta-analysis of time-to-event data.",
+      "journal": "Surgical endoscopy",
+      "abstract": "Indocyanine green fluorescence imaging (ICG-FI) is increasingly used for lymph node mapping in gastric cancer (GC) surgery, but its impact on long-term oncologic outcomes remains unclear. This systematic review and meta-analysis evaluated the long-term survival benefits of ICG-guided lymphadenectomy compared with conventional surgery. PubMed, Embase, and Cochrane Library were searched from inception to November 2025, supplemented by clinical trial registries. Studies comparing ICG-guided versus non-ICG-guided lymphadenectomy in GC patients were included. Primary outcomes were overall survival (OS) and disease-free survival (DFS). Secondary outcomes included lymph node yield and postoperative complications. Random-effects models were used, and Bayesian analyses estimated the probability of survival benefit. Seven studies comprising 7518 patients were included. ICG significantly improved 3-year OS (HR = 0.635, 95% CI 0.511-0.790, P = 0.000), 3-year DFS (HR = 0.682, 95% CI 0.530-0.877, P = 0.003), and 5-year OS (HR = 0.700, 95% CI 0.507-0.966, P = 0.030), with Bayesian posterior probabilities of 100%, 100%, and 99.1%, respectively. No significant differences were observed for 2-year OS or DFS. ICG significantly increased lymph node yield (WMD = 6.557, 95% C1 3.821-9.294, P = 0.000) without increasing postoperative complications (RR = 0.899, 95% CI 0.647-1.250, P = 0.527). ICG-guided lymphadenectomy is associated with improved long-term survival and increased lymph node dissection without increasing complications. These findings support ICG-FI as a valuable adjunct in gastric cancer surgery. Further high-quality randomized trials are warranted to validate these results in diverse populations and settings. CRD420261342420.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42850302/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "gastric",
+          "gist"
+        ],
+        "studyType": [
+          "clinical_trial",
+          "diagnosis",
+          "surgery",
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42850173",
+      "title": "Postoperative chemotherapy reintroduction in good responders after colorectal liver metastases resection: A French randomized phase III trial - IRIMAD.",
+      "journal": "Digestive and liver disease : official journal of the Italian Society of Gastroenterology and the Italian Association for the Study of the Liver",
+      "abstract": "Most patients who develop metachronous colorectal liver metastases (CRLM) have previously received adjuvant FOLFOX for stage III primary cancer. Perioperative FOLFOX is often contraindicated due to persistent neuropathy or suspected oxaliplatin resistance, leading most of these patients to receive preoperative FOLFIRI±a VEGF/EGFR-targeting biologic. The benefit of reintroducing FOLFIRI as adjuvant treatment in good responders has never been evaluated. This is a multicentre, open-label, randomised, two-arm, phase III superiority trial. Eligible patients who underwent curative (R0/R1) resection of fewer than 10 metachronous CRLM showing objective response after 2-8 cycles of preoperative FOLFIRI will be randomised to postoperative FOLFIRI reintroduction (experimental arm, 4-10 cycles to reach a total of 12 perioperative cycles) or no postoperative treatment (control arm). The primary endpoint is 3-year disease-free survival. Secondary endpoints include overall survival, liver-free survival, extra-hepatic recurrence rate, compliance, quality of life, and treatment-related toxicity. The required sample size is 254 patients (127 per arm). Currently, patients treated with preoperative FOLFIRI receive no adjuvant chemotherapy, as trials failed to show benefit in unselected populations. Demonstrating efficacy of adjuvant FOLFIRI in good responders would validate the concept of tailored postoperative treatment based on chemotherapy response. ClinicalTrials.gov NCT06501482 (07/2024). https://clinicaltrials.gov/study/NCT06501482.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42850173/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "other_gi"
+        ],
+        "studyType": [
+          "clinical_trial",
+          "drug_therapy",
+          "surgery"
+        ]
+      }
+    },
+    {
+      "pmid": "42850076",
+      "title": "Regional Expansion of Transplant Oncology: The First Case of Liver Transplantation for Unresectable Colorectal Liver Metastasis in the Gulf Region.",
+      "journal": "Transplantation proceedings",
+      "abstract": "Liver transplantation for colorectal liver metastases (CRLM) has emerged as a potential curative option for highly selected patients with unresectable liver-only disease, with recent trials demonstrating 5-year overall survival rates of 55% to 83%. Surgical resection remains the only curative treatment for colorectal liver metastases (CRLM), but its applicability is limited, with only 25% of patients eligible. However, this approach remains investigational with limited global experience and has never been implemented in the Middle East region. Recently, liver transplantation (LT) has emerged as a potential curative option for select patients with unresectable liver-only metastases. This report highlights the potential for liver transplantation to serve as a curative modality in highly selected patients with CRLM and demonstrates its feasibility in a new geographic region. We report the first case in the Gulf Cooperation Council (GCC) region of a 41-year-old male with unresectable CRLM who underwent LT following an aggressive multimodal pretransplant protocol. The patient was initially treated at an outside facility for synchronous left-sided colorectal cancer with liver metastases, achieving complete remission after FOLFOX chemotherapy. He subsequently developed 2 liver recurrences: the first in July 2023, with 17 metastases managed at the outside facility by surgical resection and chemotherapy; and the second in October 2023, with 40 metastases, treated with systemic chemotherapy and trans arterial radioembolization (TARE-Y90). He received additional treatment with ablative liver-directed therapies consistent with the \"Cleveland Protocol.\" The patient subsequently underwent orthotopic liver transplantation. His postoperative course was complicated with moderate acute cellular rejection, which was successfully treated, and he was discharged on post-operative day 16. This case demonstrates the successful implementation of liver transplantation for CRLM in the Gulf region, achieving disease-free survival at 4-month follow-up despite high-risk biological features typically associated with poor prognosis. It illustrates the feasibility and potential benefit of LT for unresectable CRLM in carefully selected patients, following an aggressive pretransplant locoregional therapy protocol modeled after the Cleveland Clinic approach. Key success factors included rigorous patient selection using established criteria (Oslo score 0, low Fong score, low PET-MTV), intensive pretransplant optimization with multimodal therapy, and experienced multidisciplinary management of post-transplant complications. With careful patient selection and integration of systemic and liver-directed therapies to achieve maximal disease control, this strategy may help expand transplant eligibility, possibly offering a curative approach. This case provides valuable regional data for the evolving role of transplant oncology in colorectal cancer management in a resource-limited setting.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42850076/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal"
+        ],
+        "studyType": [
+          "drug_therapy",
+          "diagnosis",
+          "surgery"
+        ]
+      }
+    },
+    {
+      "pmid": "42849331",
+      "title": "Epidemiology of resected colorectal liver metastasis and use of perioperative chemotherapy: a prospective cohort study on the impact of next generation sequencing and mutation profiling in a real-world population.",
+      "journal": "European journal of surgical oncology : the journal of the European Society of Surgical Oncology and the British Association of Surgical Oncology",
+      "abstract": "Colorectal liver metastasis (CRLM) selected for surgery is increasingly influenced by mutation-profiling yet scarcely described outside clinical trials. The aim of this study was to investigate impact of mutation-testing in routine care on management of CRLM. Analysis of a population-derived cohort study matched with the Cancer Registry of Norway. Clinicopathological, mutational, and survival data were analysed across time-intervals. The study included 3022 patients with primary colorectal cancer; 777 (25.8%) developed CRLM (synchronous n = 560; 72.1% and metachronous n = 217; 27.9%; liver-only n = 376; 48.4%). Hepatectomy-rate was 24.6% (n = 191/777), and highest for metachronous presentation (33.6%). No time-difference in sex, age, number or size of CRLM lesions was found. Patients having hepatectomy were younger than patients without (median 65 vs. 72 yrs). Females were less likely to undergo hepatectomy compared to males (20.6% vs 27.4%). Mutation-analysis increased over time, with KRAS-mutation (30.4%), BRAF-mutation (12.9%) and MSI+ (4.3%) across all tested in most recent time-period. Mutated KRAS (n = 55) was most common mutation, with KRASG12D and KRASG12V most frequent subtypes. PIK3CA occurred in 15 (11%) patients. No mutation was found in 44 (31%) of tested CRLMs. Neoadjuvant chemotherapy increased (from 38% to 60%; P = 0.018), with more synchronous CRLM resected (from 46% to 65%; P = 0.039). The most recent time-period was associated with inferior survival. Resection-rates of CRLM were stable but selection factors varied over time. Increased use of mutation-testing was associated with increased use of neoadjuvant chemotherapy, increased resection for bilobar and synchronous CRLM, and with temporal reduced recurrence-free and overall survival.",
+      "date": "2026-09-26",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42849331/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal",
+          "gist"
+        ],
+        "studyType": [
+          "drug_therapy",
+          "biomarker",
+          "surgery"
+        ]
+      }
+    },
+    {
+      "pmid": "42849252",
+      "title": "Autoimmune gastritides: A critical review.",
+      "journal": "Journal of autoimmunity",
+      "abstract": "Autoimmune gastritis (AIG) has long been considered a host-related autoimmune disease that results in oxyntic atrophy, leading to Pernicious Anemia and increasing neoplastic risk. Current evidence discloses that gastric autoimmunity includes a spectrum of inflammatory diseases (i.e., Autoimmune Gastritides) with distinct etiologies, comorbidities, clinical presentations, histological phenotypes, and outcomes. To distinguish the clinical-pathological subtypes of immunomediated gastric disorders. Gastric autoimmune diseases comprise Type-1 and Type-2 variants. Type-1 atrophic AIG may lead to vitamin B12 malabsorption, resulting in pernicious anemia, and carries a high risk of Type-1 neuroendocrine gastric neoplasia. Type-1a AIG includes two subtypes. Type-1a is the canonical oxyntic-restricted AIG subtype with no history of exposure to H. pylori infection. In this subtype, a T-cell-rich, cytolytic infiltrate targets the corpus/fundus mucosa, resulting in oxyntic-restricted atrophic changes. Type-1b combines autoimmune etiology with prior or current exposure to H. pylori infection. The dual etiology of Type-1b AIG combines autoimmune oxyntic damage with H. pylori-related antral lesions. This condition may lead to extensive (antral and oxyntic) atrophy, necessitating cancer prevention strategies tailored to the histological stage of gastritis. Type-2 AIG is far less frequent than Type-1, presents with mucus-secreting (antral-pyloric) and oxyntic (corpus/fundus) erosive mucosal high-grade pangastritis, and involves symptomatic multiorgan immune-mediated comorbidities, irrespective of H. pylori status. Type-2 combines Type-1-like serology with a wide, variable spectrum of circulating organ-specific and non-organ-specific autoantibodies and requires targeted treatment. The nosology of autoimmune gastritides should reflect their diverse etio-pathogenesis, clinicopathological presentations, and outcomes.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42849252/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "other_gi"
+        ],
+        "studyType": [
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42849145",
+      "title": "Wine intake and cancer risk: An umbrella review of meta-analyses.",
+      "journal": "Cancer epidemiology",
+      "abstract": "Alcohol consumption is a known risk factor for cancer, but different alcoholic beverages may be differently associated with cancer risk. Wine is a complex hydro-alcoholic solution containing several compounds with potential anti-carcinogenic properties. This umbrella review aimed to summarize the available evidence on the association between wine consumption and cancer risk across different cancer sites. A systematic search was conducted on PubMed, Scopus and Web of Science, including systematic reviews and meta-analyses published up to April 28, 2026. The methodological quality of the included meta-analyses was evaluated using AMSTAR-2. The strength of evidence was assessed considering statistical significance, number of cases, heterogeneity and small-study effects. Pooled analyses were considered separately. Twenty-seven meta-analyses were included. Most of the associations between wine consumption and cancer risk were not statistically significant. No significant associations were generally found for colorectal, gastric, bladder, endometrial, ovarian and lung cancers. An increased risk was reported for oral and pharyngeal cancer (RR 2.12, 95% CI 1.37-3.29) and esophageal cancer (RR 5.34, 95% CI 1.43-19.89). The available evidence regarding specific beverage types (red versus white wine) was highly inconsistent across the evaluated cancer sites. For breast cancer, risk estimates were remarkably similar between white and red wine, while findings for prostate cancer showed conflicting directions across the included meta-analyses, preventing definitive conclusions regarding beverage-specific effects. The available evidence showed a heterogeneous association between wine consumption and cancer risk across different cancer sites. While most associations were not statistically significant, increased risks were reported for some malignancies. However, the heterogeneity and methodological limitations of the available evidence do not allow definitive conclusions regarding the specific role of wine in cancer risk.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42849145/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "esophageal"
+        ],
+        "studyType": [
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42849091",
+      "title": "Reprogramming the therapeutic fate of living biotherapeutic products for intestinal diseases via biomaterials.",
+      "journal": "Biomaterials",
+      "abstract": "Live biotherapeutic products (LBP) hold great promise for the treatment of intestinal diseases such as inflammatory bowel disease and colorectal cancer, owing to their unique abilities to modulate the gut microbiota, regulate host immunity, and influence drug metabolism. However, the use of natural strains remains constrained by several challenges, including poor survival, limited colonization efficiency, immune clearance and non-specific targeting. Rational engineering of bacteria can overcome these limitations, while biomaterials, owing to their safety and versatile functionalities, provide powerful tools for bacterial modification. Recent studies have focused on developing biomaterial-modified bacteria (BMB) using lipid-based coatings, hydrogels, organic-inorganic hybrid materials, antibody or functional protein and cell membrane. This review systematically summarizes strategies for modifying bacterial surfaces with these biomaterials, elucidates the underlying mechanisms by which they enhance bacterial performance, and highlights recent advances in this field, offering insights that may inspire the design of the next generation of BMB based on high-throughput platforms, synthetic biology, and artificial intelligence (AI).",
+      "date": "2026-10-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42849091/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal"
+        ],
+        "studyType": [
+          "basic_research",
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42848681",
+      "title": "Association between KRAS gene mutation and clinicopathological factors in patients with metastatic colorectal cancer.",
+      "journal": "Arquivos brasileiros de cirurgia digestiva : ABCD = Brazilian archives of digestive surgery",
+      "abstract": "Colorectal cancer is a global health problem with high incidence and mortality rates, frequently diagnosed at metastatic stages. Mutations in the KRAS gene play a key role in colorectal cancer progression, significantly influencing treatment resistance and prognosis. This study investigated the association between clinicopathological characteristics and KRAS mutations in patients with metastatic colorectal cancer. This retrospective study evaluated medical records of patients with metastatic colorectal carcinoma who underwent KRAS gene mutation testing. A total of 96 patients treated in 2024 were included in the analysis. KRAS mutations were identified in 63.54% of patients, predominantly in codon 12 (70.49%) and codon 13 (14.75%). No significant associations were found between KRAS mutation status and factors such as sex, age, or tumor location. Nevertheless, KRAS mutations were more frequently observed in patients with left-sided colon tumors, contrasting with the findings described in the literature. KRAS mutations were associated with poorer prognosis, higher rates of metastases (particularly to the liver), and higher rates of resistance to conventional treatments, such as chemotherapy. This study highlights the importance of KRAS mutation testing to support personalized, more effective treatment strategies to improve the prognosis of patients with metastatic colorectal cancer.",
+      "date": "2026-01-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42848681/",
+      "meshTerms": [
+        "Humans",
+        "Colorectal Neoplasms",
+        "Retrospective Studies",
+        "Mutation",
+        "Proto-Oncogene Proteins p21(ras)",
+        "Female",
+        "Male",
+        "Middle Aged",
+        "Aged",
+        "Neoplasm Metastasis",
+        "Prognosis",
+        "Adult",
+        "Aged, 80 and over"
+      ],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal"
+        ],
+        "studyType": [
+          "drug_therapy",
+          "biomarker"
+        ]
+      }
+    },
+    {
+      "pmid": "42848519",
+      "title": "Index-window C-reactive protein and carcinoembryonic antigen and five-year all-cause mortality in Hispanic/Latino and non-Hispanic White patients with colorectal cancer: a retrospective biomarker cohort study.",
+      "journal": "Future science OA",
+      "abstract": "To examine index-window carcinoembryonic antigen (CEA), C-reactive protein (CRP), and five-year recorded mortality by ethnicity in colorectal cancer. This retrospective University of California Health Data Warehouse cohort included Hispanic/Latino and non-Hispanic White adults indexed during 2012-2020 with both biomarkers measured within ±30 days and complete covariates. Linear regression modeled log(CEA + 0.1); Cox regression modeled recorded all-cause mortality. Among 345 patients, 143 deaths were recorded. Hispanic/Latino ethnicity was associated with higher log(CEA + 0.1) (β = 0.743; robust 95% confidence interval [CI], 0.202-1.285; P = 0.007). The mortality association was nonsignificant (hazard ratio [HR], 0.723; 95% CI, 0.483-1.084; P = 0.117). Higher log(CEA + 0.1) (HR, 1.266; 95% CI, 1.174-1.366; P < 0.001) and log(CRP + 0.1) (HR, 1.134; 95% CI, 1.037-1.239; P = 0.006) were associated with mortality. In this biomarker-selected cohort, Hispanic/Latino patients had higher recorded CEA without a statistically significant ethnic-group mortality difference. Confirmation requires clinically characterized cohorts with stage, treatment, biomarker timing, verified assay comparability, and complete mortality ascertainment.",
+      "date": "2026-12-01",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42848519/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal"
+        ],
+        "studyType": [
+          "biomarker"
+        ]
+      }
+    },
+    {
+      "pmid": "42848262",
+      "title": "Beyond Tumor Treating Fields: Multimodal Antitumor Action and the Clinical Potential of Pulsed Electromagnetic Fields.",
+      "journal": "Current medical science",
+      "abstract": "Pulsed electromagnetic fields (PEMFs) are a noninvasive, safe, and well-tolerated physical therapy modality with established applications in musculoskeletal disorders. Their potential role in oncology has attracted increasing interest. This review synthesizes current evidence on the antitumor mechanisms and experimental effects of PEMFs across diverse cancer models. Reported biological effects include the induction of apoptosis, regulation of intracellular calcium homeostasis, inhibition of angiogenesis, modulation of immune responses, induction of oxidative stress, regulation of autophagy and cellular metabolism, and enhancement of sensitivity to radiotherapy and chemotherapy. Preclinical studies suggest that PEMFs can selectively suppress proliferation and promote cell death in malignant cells while exerting comparatively limited cytotoxicity in normal cells. Evidence has been reported in models of breast cancer, glioma, hepatocellular carcinoma, melanoma, and other malignancies. Although clinical investigations remain preliminary, studies conducted over the past two decades support a favorable safety profile and suggest potential therapeutic efficacy, particularly in combination with chemotherapy, radiotherapy, or immunotherapy. Artificial intelligence and machine learning may facilitate parameter optimization and the development of individualized treatment regimens. Ultimately, the integration of PEMFs into routine oncology practice will require well-designed, large-scale randomized controlled trials to standardize treatment protocols, define clinical indications, and establish their role in multimodal cancer care.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42848262/",
+      "meshTerms": [],
+      "pubTypes": [
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "hepatic"
+        ],
+        "studyType": [
+          "clinical_trial",
+          "drug_therapy",
+          "immunotherapy",
+          "basic_research",
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42848247",
+      "title": "Tumor microenvironment and gut microbiome in immunotherapy resistance in gastric cancer: clinical questions, biological mechanisms, and evidence-based therapeutic perspectives.",
+      "journal": "Medical oncology (Northwood, London, England)",
+      "abstract": "Immune checkpoint inhibitors (ICIs) have improved systemic therapy for advanced gastric and gastroesophageal junction cancer, yet primary and acquired resistance remain common and are incompletely explained by established tumor biomarkers. This narrative review evaluates the connected roles of the tumor microenvironment (TME), host immunity, and the gut microbiome in shaping ICI resistance in gastric cancer. We performed a structured PubMed search through 28 August 2026 and prioritized gastric cancer-specific clinical and translational evidence, supplemented by systematic reviews, meta-analyses, and mechanistically relevant studies from other tumor types when necessary. Within the gastric cancer TME, cancer-associated fibroblasts, myeloid cells, regulatory T cells, extracellular matrix remodeling, hypoxia, angiogenesis, and T-cell exhaustion can promote immune exclusion or dysfunction. Microbial diversity, microbial metabolites, antibiotics, proton pump inhibitors, defined live biotherapeutics, fecal microbiota transplantation, and diet may influence systemic antitumor immunity, but most human evidence is retrospective, cross-sectional, or derived from non-gastric cancers. Clinically, antibiotic stewardship, reassessment of unnecessary acid suppression, and nutritional optimization are reasonable supportive measures, whereas routine probiotic supplementation, Clostridium butyricum MIYAIRI 588 for ICI sensitization, and fecal microbiota transplantation remain investigational in gastric cancer. Future studies should integrate longitudinal exposures, serial TME profiling, stool metagenomics, medication use, nutritional status, and clinical outcomes. The TME-gut microbiome axis is therefore a biologically plausible framework for biomarker-guided research, but current evidence does not justify empiric microbiome-directed anticancer therapy in gastric cancer.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42848247/",
+      "meshTerms": [
+        "Humans",
+        "Stomach Neoplasms",
+        "Tumor Microenvironment",
+        "Drug Resistance, Neoplasm",
+        "Gastrointestinal Microbiome",
+        "Immune Checkpoint Inhibitors",
+        "Immunotherapy"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "gastric"
+        ],
+        "studyType": [
+          "immunotherapy",
+          "biomarker",
+          "basic_research",
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42848148",
+      "title": "The gut-pancreas axis: microbial dysbiosis as a pathogenic driver of diabetes and pancreatic cancer.",
+      "journal": "Medical oncology (Northwood, London, England)",
+      "abstract": "The gut microbiome dysbiosis is a potential contributing mediator for the gut and pancreas link. The gut microbiome contributes to the development of both diabetes and pancreatic cancer. There are approximately two distinct ways through which the gut microbiome leads to cell damage and then systemic inflammatory responses. The gut microbiome generates a unique set of metabolic products, activating diverse pathways and cytokines. The bottom line for this process leads to the generation of systemic inflammation. In type 2 diabetes, inflammatory signaling predominantly disrupts IRS-1/PI3K/AKT signaling, impairing insulin receptor pathways and glucose absorption, triggering β-cell malfunction and insulin resistance. Dysbiosis-associated inflammatory signaling in pancreatic cancer stimulates the growth of the tumour via activating oncogenic pathways, immune evasion, and epithelial-mesenchymal transition (EMT). The bacterial metabolites can cause. DNA mutations and affect the signaling pathways of cancer cells. In addition, this review offers an integrated microbiome-driven inflammatory-metabolic paradigm utilizing the gut-pancreas axis to associate pancreatic cancer and diabetes. A realistic and in-depth understanding of the above-described processes could result in the development of new techniques for the targeted modification of the gut microbiome for the prevention and management of such diseases.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42848148/",
+      "meshTerms": [
+        "Humans",
+        "Pancreatic Neoplasms",
+        "Dysbiosis",
+        "Gastrointestinal Microbiome",
+        "Diabetes Mellitus, Type 2",
+        "Animals",
+        "Pancreas",
+        "Signal Transduction"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "pancreatic"
+        ],
+        "studyType": [
+          "biomarker",
+          "basic_research",
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42848120",
+      "title": "Cancer-associated fibroblasts in therapeutic resistance of hepatocellular carcinoma: evidence, mechanisms, and translational implications.",
+      "journal": "Medical oncology (Northwood, London, England)",
+      "abstract": "Hepatocellular carcinoma (HCC) remains difficult to treat because responses to tyrosine kinase inhibitors (TKIs) and immune checkpoint inhibitors (ICIs) are limited and heterogeneous. Cancer-associated fibroblasts (CAFs) can influence therapeutic responses through paracrine signaling, immune regulation, and extracellular matrix remodeling, but CAF-driven tumor progression should not be equated with therapeutic resistance. This review critically evaluates HCC-specific evidence according to defined drug exposure, treatment-related outcomes, and functional rescue. The most mechanistically resolved direct resistance mechanisms involve CAF-derived SPP1, which activates integrin-PKCα-dependent bypass signaling during sorafenib or lenvatinib treatment; CAF-derived CXCL12, which reduces sorafenib-induced apoptosis through CXCR4-dependent FOLR1 upregulation; and CAF-derived fibronectin extra domain A, which activates NF-κB-SHMT1-dependent redox adaptation during sorafenib exposure, with TLR4 proposed as the upstream receptor. These pathways are supported by genetic or pharmacological interventions that restore TKI sensitivity. By contrast, POSTN⁺ CAFs are associated with IL-6/IL-6R/STAT3-dependent macrophage recruitment, increased macrophage SPP1 expression, immune exclusion, and reduced ICI responsiveness, although selective reversal of this CAF program remains unproven. Progression-associated and cross-cancer findings are therefore considered separately from established resistance mechanisms.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42848120/",
+      "meshTerms": [
+        "Humans",
+        "Carcinoma, Hepatocellular",
+        "Liver Neoplasms",
+        "Cancer-Associated Fibroblasts",
+        "Drug Resistance, Neoplasm",
+        "Animals",
+        "Protein Kinase Inhibitors",
+        "Antineoplastic Agents",
+        "Translational Research, Biomedical"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "hepatic"
+        ],
+        "studyType": [
+          "drug_therapy",
+          "immunotherapy",
+          "basic_research",
+          "review"
+        ]
+      }
+    },
+    {
+      "pmid": "42848099",
+      "title": "A propionate metabolism-related gene signature predicts prognosis and immunological features in colorectal cancer.",
+      "journal": "Medical oncology (Northwood, London, England)",
+      "abstract": "Propionate metabolism has emerged as a key metabolic axis shaping colorectal cancer (CRC) biology and the tumor microenvironment; however, propionate metabolism-related molecular stratification and its prognostic and therapeutic implications remain insufficiently characterized. Transcriptomic profiles of The Cancer Genome Atlas colon adenocarcinoma (TCGA-COAD) and rectum adenocarcinoma (TCGA-READ) were integrated to construct a CRC training cohort, and GSE38832 served as an external validation set. Propionate metabolism-related genes (PMRGs) were curated from GeneCards and intersected with differentially expressed genes to define differentially expressed PMRGs (DEPMRGs). Prognostic DEPMRGs were screened by univariate Cox regression and used for consensus clustering to identify propionate metabolism-related subtypes, followed by functional enrichment and immune landscape profiling (ESTIMATE, single-sample Gene Set Enrichment Analysis, and CIBERSORT). After adjustment for clinicopathological characteristics, Cox proportional hazards modeling was performed to verify whether the signature retained independent prognostic relevance. To facilitate individualized risk estimation, a nomogram was constructed from the significant variables, and its reliability and potential value in clinical decision-making were further evaluated through calibration analysis and decision curve analysis. Immunotherapy relevance was explored using Immunophenoscore and Tumor Immune Dysfunction and Exclusion, and anti-PD-L1 response was assessed in the IMvigor210 cohort. To characterize molecular differences across risk subgroups, the mutational landscape and tumor mutational burden were profiled with the maftools package, whereas potential therapeutic susceptibility was inferred from pRRophetic prediction and CellMiner-based drug response analyses. Application of consensus clustering to prognostic PMRG-related genes revealed two molecular classes in CRC, which were distinguished by different prognostic patterns and immune microenvironmental characteristics. A four-gene prognostic signature was then established, enabling classification of patients into low- and high-risk subsets with clearly separated survival curves in the training cohort; this predictive pattern was further reproduced in GSE38832. Comprehensive immune characterization demonstrated that the two risk groups differed substantially in immune-cell infiltration, checkpoint-gene expression, and immunotherapy-associated signatures, with the low-risk group showing a more favorable predicted response in the IMvigor210 cohort. Propionate metabolism-associated subtyping and a four-gene prognostic signature enable robust risk stratification in CRC and link metabolic programs to immune contexture and therapeutic vulnerability, providing a potential framework for prognosis assessment and individualized treatment.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42848099/",
+      "meshTerms": [
+        "Humans",
+        "Prognosis",
+        "Colorectal Neoplasms",
+        "Propionates",
+        "Tumor Microenvironment",
+        "Female",
+        "Male",
+        "Biomarkers, Tumor",
+        "Transcriptome",
+        "Nomograms",
+        "Adenocarcinoma",
+        "Gene Expression Profiling",
+        "Middle Aged",
+        "Gene Expression Regulation, Neoplastic"
+      ],
+      "pubTypes": [
+        "Journal Article"
+      ],
+      "categories": {
+        "disease": [
+          "colorectal"
+        ],
+        "studyType": [
+          "immunotherapy",
+          "biomarker",
+          "guideline"
+        ]
+      }
+    },
+    {
+      "pmid": "42848087",
+      "title": "Survival outcomes following total intravenous versus volatile anesthesia in esophagogastric cancer surgery: a systematic review and meta-analysis.",
+      "journal": "Langenbeck's archives of surgery",
+      "abstract": "Esophagogastric cancers remain among the leading causes of cancer-related mortality worldwide. Surgical resection represents the primary curative treatment strategy; however, perioperative factors may influence long-term oncological outcomes. Experimental and clinical evidence suggests that anesthetic techniques may affect tumor progression and recurrence through immunological and oncological pathways. Total intravenous anesthesia (TIVA) has been proposed to exert immunomodulatory and antitumor effects compared to volatile anesthesia (VA), although evidence remains inconclusive. This systematic review and meta-analysis aimed to evaluate the impact of TIVA versus volatile anesthesia on survival outcomes in patients undergoing esophagogastric cancer surgery. A systematic review and meta-analysis was conducted according to PRISMA 2020 guidelines. PubMed and Scopus were searched for studies published between 2010 and 2025 comparing TIVA with volatile anesthesia in adult patients undergoing curative surgery for esophageal or gastric cancer. The primary outcome was overall survival (OS). Secondary outcomes included recurrence-free survival (RFS), early mortality, operation time, and postoperative hospital stay. Pooled hazard ratios (HR), risk ratios (RR), and mean differences (MD) with 95% confidence intervals (CI) were calculated using random-effects models. Thirteen studies (3 randomized controlled trials and 10 retrospective studies) involving 264,543 patients were included. Of these, 41,977 patients received TIVA and 222,566 received volatile anesthesia. Pooled analysis of eight studies demonstrated significantly improved overall survival with TIVA (HR 0.80, 95% CI 0.69-0.93; p = 0.003). Subgroup analysis showed a significant survival benefit in patients undergoing gastrectomy (HR 0.74, 95% CI 0.60-0.91; p < 0.004), whereas no significant difference was observed for esophagectomy (HR 0.89, 95% CI 0.73-1.10; p = 0.29). TIVA was associated with non-significant trends toward improved recurrence-free survival (HR 0.91, 95% CI 0.77-1.06; p = 0.22) and reduced early mortality (HR 0.90, 95% CI 0.77-1.05; p = 0.17). No statistically significant differences were observed in operation time (MD - 3.81 min, 95% CI - 10.75 to 3.13) or hospital stay (MD - 0.19 days, 95% CI - 0.39 to 0.00; p = 0.06). TIVA may be associated with improved long-term survival outcomes compared with volatile anesthesia in patients undergoing esophagogastric cancer surgery, particularly among patients undergoing gastrectomy. Given the predominance of retrospective evidence and methodological heterogeneity, further high-quality prospective randomized studies are required to clarify the oncological impact of anesthetic techniques in upper gastrointestinal cancer surgery.",
+      "date": "2026-10-07",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42848087/",
+      "meshTerms": [
+        "Humans",
+        "Esophageal Neoplasms",
+        "Stomach Neoplasms",
+        "Anesthesia, Intravenous",
+        "Anesthesia, Inhalation",
+        "Gastrectomy",
+        "Esophagectomy",
+        "Onco-anesthesia",
+        "Survival Rate"
+      ],
+      "pubTypes": [
+        "Journal Article",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Comparative Study"
+      ],
+      "categories": {
+        "disease": [
+          "gastric",
+          "esophageal"
+        ],
+        "studyType": [
+          "clinical_trial",
+          "surgery",
+          "basic_research",
+          "review",
+          "guideline"
+        ]
+      }
+    },
+    {
+      "pmid": "42848081",
+      "title": "[Modern concepts in the surgical treatment of esophageal cancer].",
+      "journal": "Chirurgie (Heidelberg, Germany)",
+      "abstract": "The surgical treatment of esophageal cancer is still one of the most demanding surgical procedures with poor long-term survival and considerable perioperative morbidity and mortality. The McKeown and Ivor Lewis procedures have been described decades ago and are currently mainly applied in multimodal treatment settings. A systematic lymph node dissection is indispensable and prognostically relevant and is adapted to the primary localization of the tumor. The systematic approach to lymph node resection is discussed based on the Japanese classification of the anatomical lymph node location, whereby lymphatic oligometastasis is also specifically addressed. The use of modern techniques has already led to a substantial improvement in the results and the underlying surgical strategies can also be used for laparoscopic, thoracoscopic and robotic procedures. A reduction of perioperative morbidity by the use of minimally invasive procedures is well-established for the abdominal as well as the thoracic phase of the surgery. Innovative visualization systems for assessment of the vascularization or lymphatic drainage ducts and the use of artificial intelligence are expected to further improve safety and oncological precision of surgery for esophageal cancer.",
+      "date": "2026-10-08",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42848081/",
+      "meshTerms": [],
+      "pubTypes": [
+        "English Abstract",
+        "Journal Article",
+        "Review"
+      ],
+      "categories": {
+        "disease": [
+          "esophageal"
+        ],
+        "studyType": [
+          "surgery",
+          "review"
+        ]
+      }
+    }
+  ],
+  "trials": [
+    {
+      "nctId": "NCT07233447",
+      "title": "Prevalence of H. Pylori in Stomach Cancers in the West Indies",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT07233447",
+      "category": "gastric"
+    },
+    {
+      "nctId": "NCT07647731",
+      "title": "Evaluation of Endoscopic Calcium Electroporation in Gastric Tumors: A Minimally Invasive Treatment Strategy",
+      "status": "NOT_YET_RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT07647731",
+      "category": "gastric"
+    },
+    {
+      "nctId": "NCT06856382",
+      "title": "Identification of Paraneoplastic and Intratumor Microplastics in Gastric Cancer and Their Association Analysis With Macrogenomics and Metabolomics",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT06856382",
+      "category": "gastric"
+    },
+    {
+      "nctId": "NCT06495645",
+      "title": "Computer-aided Gastric Lesion Localization and Miss Rate of Gastric Neoplasms: a Tandem, Randomized Controlled Study",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT06495645",
+      "category": "gastric"
+    },
+    {
+      "nctId": "NCT07787052",
+      "title": "R-GASTIM - Clinicobiological Cohort of Gastric Cancers",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT07787052",
+      "category": "gastric"
+    },
+    {
+      "nctId": "NCT06643429",
+      "title": "Impact of Environmental Factors and Metabolomics on Colorectal Cancer Development and Prognosis Based on Environmental Factors and Metabolomics.",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT06643429",
+      "category": "colorectal"
+    },
+    {
+      "nctId": "NCT07559825",
+      "title": "Early-Onset Colorectal Cancer Patients Too Young for Screening: Outcomes and Treatment Patterns",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT07559825",
+      "category": "colorectal"
+    },
+    {
+      "nctId": "NCT07430527",
+      "title": "A Retrospective Review of the Secondary-care Colorectal Cancer Pathway Within NHS Lothian: An Evaluation of 3 Years of Pathway Performance",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT07430527",
+      "category": "colorectal"
+    },
+    {
+      "nctId": "NCT06878131",
+      "title": "Precision-MRD: Prospective Observational Study of Biomarker-directed Systemic Therapy for Colorectal Cancer Patients With Minimal Residual Disease",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT06878131",
+      "category": "colorectal"
+    },
+    {
+      "nctId": "NCT06342440",
+      "title": "A Liquid Biopsy Assay For The Non-Invasive Early Detection of Advanced Adenomas and Colorectal Cancer",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT06342440",
+      "category": "colorectal"
+    },
+    {
+      "nctId": "NCT06070376",
+      "title": "Comparative Study Between Fully Covered Esophageal Prosthesis (FC-SEMS) and Partially Covered Esophageal Prosthesis (PC-SEMS) in the Palliation of Dysphagia Due to Malignant Neoplasm of Esophagus.",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT06070376",
+      "category": "esophageal"
+    },
+    {
+      "nctId": "NCT06721715",
+      "title": "Textbook Outcomes After Oesophagectomy in a Regional Australian Hospital: a Retrospective Observational Cohort Study",
+      "status": "NOT_YET_RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT06721715",
+      "category": "esophageal"
+    },
+    {
+      "nctId": "NCT06136845",
+      "title": "The Correlation Between Microbiome of Esophageal Cancer Patients and Post Esophagectomy Anastomotic Leaks",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT06136845",
+      "category": "esophageal"
+    },
+    {
+      "nctId": "NCT02735057",
+      "title": "Phase I-II Study Chemoradiation in Elderly Patients With Oesophagus Cancer",
+      "status": "RECRUITING",
+      "phase": "PHASE1, PHASE2",
+      "url": "https://clinicaltrials.gov/study/NCT02735057",
+      "category": "esophageal"
+    },
+    {
+      "nctId": "NCT07375420",
+      "title": "Optimising Prehabilitation Exercise to Enhance Tumour Outcomes in Advanced Oesophageal Cancer",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT07375420",
+      "category": "esophageal"
+    },
+    {
+      "nctId": "NCT02869581",
+      "title": "Institut Paoli-Calmettes Pancreatic Neoplasms Database",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT02869581",
+      "category": "pancreatic"
+    },
+    {
+      "nctId": "NCT06914674",
+      "title": "Tamoxifen for Advanced Solid Pseudopapillary Tumor of the Pancreas",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "url": "https://clinicaltrials.gov/study/NCT06914674",
+      "category": "pancreatic"
+    },
+    {
+      "nctId": "NCT07183280",
+      "title": "The Construction and Maintenance of A Real World Study Multicentric Database for Solid Pseudopapillary Neoplasm of the Pancreas",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT07183280",
+      "category": "pancreatic"
+    },
+    {
+      "nctId": "NCT03218345",
+      "title": "Multi-center Prospective Study on EUS-guided Radiofrequency Ablation for Solid Pancreatic Neoplasms",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT03218345",
+      "category": "pancreatic"
+    },
+    {
+      "nctId": "NCT02000089",
+      "title": "The Cancer of the Pancreas Screening-5 CAPS5)Study",
+      "status": "RECRUITING",
+      "phase": "PHASE3",
+      "url": "https://clinicaltrials.gov/study/NCT02000089",
+      "category": "pancreatic"
+    },
+    {
+      "nctId": "NCT04053231",
+      "title": "Hepatocarcinoma Recurrence on the Liver Study - Part2",
+      "status": "NOT_YET_RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT04053231",
+      "category": "hepatic"
+    },
+    {
+      "nctId": "NCT07601464",
+      "title": "Evaluation of Tissue and Circulating microRNA Profiles in Patients With Hepatocellular Carcinoma Subjected to Thermal Ablation",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT07601464",
+      "category": "hepatic"
+    },
+    {
+      "nctId": "NCT05433467",
+      "title": "The Feasibility of CT-guided Localization for Micro Hepatocellular Carcinoma Before Surgical Resection",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT05433467",
+      "category": "hepatic"
+    },
+    {
+      "nctId": "NCT06886763",
+      "title": "Assessment of Hepatocarcinoma Innervation by Tissue Transparisation and Pharmacological Screening",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT06886763",
+      "category": "hepatic"
+    },
+    {
+      "nctId": "NCT06836518",
+      "title": "Serum Sialic Acid as a Novel Biomarker in the Diagnosis of Hepatocellular Carcinoma",
+      "status": "NOT_YET_RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT06836518",
+      "category": "hepatic"
+    },
+    {
+      "nctId": "NCT07585266",
+      "title": "A Phase 3, Randomized, Multicenter, Open-Label Study of Velzatinib (GSK6042981) Versus Imatinib in Participants With Previously Untreated Metastatic and/or Unresectable Gastrointestinal Stromal Tumors (GIST)",
+      "status": "RECRUITING",
+      "phase": "PHASE3",
+      "url": "https://clinicaltrials.gov/study/NCT07585266",
+      "category": "gist"
+    },
+    {
+      "nctId": "NCT07171203",
+      "title": "Phase I Study of Preoperative Therapy Imatinib Mesylate and Fampridine in KIT Mutant Gastrointestinal Stromal Tumor (GIST)",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "url": "https://clinicaltrials.gov/study/NCT07171203",
+      "category": "gist"
+    },
+    {
+      "nctId": "NCT05938309",
+      "title": "A Prospective, Multicenter Cohort Study on the Efficacy and Safety of Laparoscopic Resection of 5cm or Larger Gastric Gastrointestinal Stromal Tumors",
+      "status": "RECRUITING",
+      "phase": "NA",
+      "url": "https://clinicaltrials.gov/study/NCT05938309",
+      "category": "gastric"
+    },
+    {
+      "nctId": "NCT06655246",
+      "title": "A Phase 1a/1b Study of the Safety, Pharmacokinetics, and Antitumor Activity of the Oral Menin Inhibitor Ziftomenib in Combination With Imatinib in Patients With Advanced Gastrointestinal Stromal Tumors (GIST) After Imatinib Failure",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "url": "https://clinicaltrials.gov/study/NCT06655246",
+      "category": "gist"
+    },
+    {
+      "nctId": "NCT05493215",
+      "title": "A Phase 2 Study of Imatinib Therapeutic Drug Monitoring in Gastrointestinal Stromal Tumor",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "url": "https://clinicaltrials.gov/study/NCT05493215",
+      "category": "gist"
+    }
+  ]
+}

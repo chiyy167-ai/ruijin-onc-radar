@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #0f172a;
+  --card: #1e293b;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.15);
+  --green: #34d399;
+  --green-soft: rgba(52, 211, 153, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #e2e8f0;
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 横向滚动筛选栏隐藏滚动条 */
+.chip-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chip-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* 安全区适配（刘海屏 / Home Indicator） */
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-bottom {
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+}
