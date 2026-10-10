@@ -17,6 +17,11 @@ import {
   saveCachedData,
 } from './lib/dataCache'
 import {
+  isWithinDays,
+  loadPaperArchive,
+  mergePapersIntoArchive,
+} from './lib/papersArchive'
+import {
   loadPrefs,
   loadReadIds,
   savePrefs,
@@ -78,7 +83,9 @@ export default function App() {
   const [selectedType, setSelectedType] = useState<string | null>(null)
   const [bookmarks, setBookmarks] = useState<FavoriteItem[]>([])
   const [readIds, setReadIds] = useState<Set<string>>(() => new Set())
-  const [prefs, setPrefs] = useState<Prefs>(() => ({ pageSize: 10, sort: 'date_desc' }))
+  const [prefs, setPrefs] = useState<Prefs>(() => loadPrefs())
+  /** 本地合并档案中的文献池（默认按近 30 天筛选展示） */
+  const [paperPool, setPaperPool] = useState<Paper[]>(() => loadPaperArchive())
   const [query, setQuery] = useState('')
   const [page, setPage] = useState(1)
   const [showTop, setShowTop] = useState(false)
@@ -88,6 +95,11 @@ export default function App() {
     setBookmarks(loadFavorites())
     setReadIds(loadReadIds())
     setPrefs(loadPrefs())
+    // 若有数据缓存，先并入本地文献档案
+    const cached = loadCachedData()?.data?.papers
+    if (cached?.length) {
+      setPaperPool(mergePapersIntoArchive(cached))
+    }
   }, [])
 
   useEffect(() => {
@@ -128,6 +140,8 @@ export default function App() {
         setData(json)
         saveCachedData(json)
         setCacheAt(new Date().toISOString())
+        // 合并进本地文献档案并持久化（支持近 30 天滚动保留）
+        setPaperPool(mergePapersIntoArchive(json.papers ?? []))
       } catch (e) {
         if (cancelled) return
         // 有本地缓存时静默失败，继续用缓存
@@ -156,9 +170,19 @@ export default function App() {
   // 切换筛选/搜索/排序/页签时回到第一页
   useEffect(() => {
     setPage(1)
-  }, [tab, selectedDisease, selectedType, query, prefs.sort, prefs.pageSize])
+  }, [
+    tab,
+    selectedDisease,
+    selectedType,
+    query,
+    prefs.sort,
+    prefs.pageSize,
+    prefs.daysWithin,
+  ])
 
-  const papers = data?.papers ?? []
+  // 文献优先用本地档案；若档案为空则回退远端
+  const papers =
+    paperPool.length > 0 ? paperPool : (data?.papers ?? [])
   const trials = data?.trials ?? []
 
   const favIdSet = useMemo(() => {
@@ -175,11 +199,21 @@ export default function App() {
         !selectedDisease || cats.disease.includes(selectedDisease)
       const typeMatch =
         !selectedType || cats.studyType.includes(selectedType)
+      const dateMatch = isWithinDays(p.date, prefs.daysWithin)
       const hay = `${p.title} ${p.journal} ${p.abstract} ${p.pmid}`
-      return diseaseMatch && typeMatch && matchesQuery(hay, q)
+      return (
+        diseaseMatch && typeMatch && dateMatch && matchesQuery(hay, q)
+      )
     })
     return sortPapers(list, prefs.sort)
-  }, [papers, selectedDisease, selectedType, query, prefs.sort])
+  }, [
+    papers,
+    selectedDisease,
+    selectedType,
+    query,
+    prefs.sort,
+    prefs.daysWithin,
+  ])
 
   const filteredTrials = useMemo(() => {
     const q = query.trim()
@@ -203,14 +237,17 @@ export default function App() {
           .map((f) => f.snapshot)
           .filter((p) => {
             const q = query.trim()
-            return matchesQuery(
-              `${p.title} ${p.journal} ${p.abstract} ${p.pmid}`,
-              q,
+            return (
+              isWithinDays(p.date, prefs.daysWithin) &&
+              matchesQuery(
+                `${p.title} ${p.journal} ${p.abstract} ${p.pmid}`,
+                q,
+              )
             )
           }),
         prefs.sort,
       ),
-    [bookmarks, query, prefs.sort],
+    [bookmarks, query, prefs.sort, prefs.daysWithin],
   )
 
   const bookmarkTrials = useMemo(
@@ -396,6 +433,9 @@ export default function App() {
             onQueryChange={setQuery}
             sort={prefs.sort}
             onSortChange={(s) => updatePrefs({ sort: s })}
+            showDaysFilter={tab === 'papers' || tab === 'bookmarks'}
+            daysWithin={prefs.daysWithin}
+            onDaysWithinChange={(d) => updatePrefs({ daysWithin: d })}
             showExport={tab === 'bookmarks' && bookmarks.length > 0}
             onExport={handleExport}
             placeholder={

@@ -1,10 +1,17 @@
-import type { SortKey } from '../lib/prefs'
+import {
+  DAYS_WITHIN_OPTIONS,
+  type DaysWithin,
+  type SortKey,
+} from '../lib/prefs'
 
 interface ListToolbarProps {
   query: string
   onQueryChange: (q: string) => void
   sort: SortKey
   onSortChange: (s: SortKey) => void
+  daysWithin?: DaysWithin
+  onDaysWithinChange?: (d: DaysWithin) => void
+  showDaysFilter?: boolean
   showExport?: boolean
   onExport?: () => void
   placeholder?: string
@@ -15,6 +22,9 @@ export default function ListToolbar({
   onQueryChange,
   sort,
   onSortChange,
+  daysWithin,
+  onDaysWithinChange,
+  showDaysFilter,
   showExport,
   onExport,
   placeholder = '搜索标题、期刊、摘要、PMID…',
@@ -34,6 +44,26 @@ export default function ListToolbar({
         />
       </div>
       <div className="flex flex-wrap items-center gap-2">
+        {showDaysFilter &&
+          daysWithin !== undefined &&
+          onDaysWithinChange && (
+            <label className="flex items-center gap-1.5 text-xs text-slate-500">
+              时间
+              <select
+                value={daysWithin}
+                onChange={(e) =>
+                  onDaysWithinChange(Number(e.target.value) as DaysWithin)
+                }
+                className="rounded-lg bg-slate-800 px-2 py-1.5 text-xs text-slate-200 ring-1 ring-slate-600 focus:outline-none focus:ring-sky-400/50"
+              >
+                {DAYS_WITHIN_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
         <label className="flex items-center gap-1.5 text-xs text-slate-500">
           排序
           <select
@@ -62,7 +92,13 @@ export default function ListToolbar({
 
 function SearchIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
       <circle cx="11" cy="11" r="7" />
       <path strokeLinecap="round" d="M20 20l-3.5-3.5" />
     </svg>

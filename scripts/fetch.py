@@ -44,7 +44,7 @@ HEADERS = {
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
 
-# 胃肠癌症 + 高质量文章类型；过去 7 天；最多 40 篇
+# 胃肠癌症 + 高质量文章类型；过去 30 天；最多 100 篇（供前端默认近 30 天筛选）
 PUBMED_QUERY = (
     "("
     '"Stomach Neoplasms"[Mesh] OR "Colorectal Neoplasms"[Mesh] OR '
@@ -63,8 +63,8 @@ PUBMED_QUERY = (
     ")"
 )
 
-PUBMED_MAX = 40
-PUBMED_DAYS = 7
+PUBMED_MAX = 100
+PUBMED_DAYS = 30
 
 # ClinicalTrials.gov 检索条件
 TRIAL_QUERIES = [
