@@ -2,9 +2,15 @@ import { useEffect, useMemo, useState } from 'react'
 import FilterBar from './components/FilterBar'
 import LoadingScreen from './components/LoadingScreen'
 import { PaperCard, TrialCard } from './components/PaperCard'
-import type { RadarData } from './types'
+import {
+  loadFavorites,
+  togglePaperFavorite,
+  toggleTrialFavorite,
+  type FavoriteItem,
+} from './lib/favorites'
+import type { Paper, RadarData, Trial } from './types'
 
-type Tab = 'papers' | 'trials'
+type Tab = 'papers' | 'trials' | 'favorites'
 const MIN_SPLASH_MS = 1400
 
 export default function App() {
@@ -15,6 +21,11 @@ export default function App() {
   const [tab, setTab] = useState<Tab>('papers')
   const [selectedDisease, setSelectedDisease] = useState<string | null>(null)
   const [selectedType, setSelectedType] = useState<string | null>(null)
+  const [favorites, setFavorites] = useState<FavoriteItem[]>([])
+
+  useEffect(() => {
+    setFavorites(loadFavorites())
+  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -54,6 +65,12 @@ export default function App() {
   const papers = data?.papers ?? []
   const trials = data?.trials ?? []
 
+  const favIdSet = useMemo(() => {
+    const s = new Set<string>()
+    for (const f of favorites) s.add(`${f.kind}:${f.id}`)
+    return s
+  }, [favorites])
+
   const filteredPapers = useMemo(() => {
     return papers.filter((p) => {
       const cats = p.categories ?? { disease: [], studyType: [] }
@@ -75,6 +92,32 @@ export default function App() {
       return diseaseMatch && typeMatch
     })
   }, [trials, selectedDisease, selectedType])
+
+  const favoritePapers = useMemo(
+    () =>
+      favorites
+        .filter((f): f is Extract<FavoriteItem, { kind: 'paper' }> => f.kind === 'paper')
+        .map((f) => f.snapshot),
+    [favorites],
+  )
+
+  const favoriteTrials = useMemo(
+    () =>
+      favorites
+        .filter((f): f is Extract<FavoriteItem, { kind: 'trial' }> => f.kind === 'trial')
+        .map((f) => f.snapshot),
+    [favorites],
+  )
+
+  const handleTogglePaper = (paper: Paper) => {
+    togglePaperFavorite(paper)
+    setFavorites(loadFavorites())
+  }
+
+  const handleToggleTrial = (trial: Trial) => {
+    toggleTrialFavorite(trial)
+    setFavorites(loadFavorites())
+  }
 
   return (
     <div className="app-shell min-h-screen text-slate-100">
@@ -125,7 +168,7 @@ export default function App() {
       />
 
       <main className="mx-auto max-w-3xl px-3 py-4 safe-bottom">
-        <div className="mb-4 flex gap-2 rounded-xl bg-slate-900/40 p-1 ring-1 ring-slate-700/50">
+        <div className="mb-4 flex gap-1.5 rounded-xl bg-slate-900/40 p-1 ring-1 ring-slate-700/50">
           <TabButton
             active={tab === 'papers'}
             onClick={() => setTab('papers')}
@@ -135,6 +178,11 @@ export default function App() {
             active={tab === 'trials'}
             onClick={() => setTab('trials')}
             label={`试验 ${filteredTrials.length}`}
+          />
+          <TabButton
+            active={tab === 'favorites'}
+            onClick={() => setTab('favorites')}
+            label={`收藏 ${favorites.length}`}
           />
         </div>
 
@@ -156,15 +204,22 @@ export default function App() {
             {filteredPapers.length === 0 ? (
               <EmptyState text="当前筛选条件下暂无文献" />
             ) : (
-              filteredPapers.map((p, i) => (
-                <div
-                  key={p.pmid || p.title}
-                  className="rise-in"
-                  style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
-                >
-                  <PaperCard paper={p} />
-                </div>
-              ))
+              filteredPapers.map((p, i) => {
+                const id = p.pmid || p.title
+                return (
+                  <div
+                    key={id}
+                    className="rise-in"
+                    style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
+                  >
+                    <PaperCard
+                      paper={p}
+                      favorited={favIdSet.has(`paper:${id}`)}
+                      onToggleFavorite={() => handleTogglePaper(p)}
+                    />
+                  </div>
+                )
+              })
             )}
           </div>
         )}
@@ -180,9 +235,65 @@ export default function App() {
                   className="rise-in"
                   style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
                 >
-                  <TrialCard trial={t} />
+                  <TrialCard
+                    trial={t}
+                    favorited={favIdSet.has(`trial:${t.nctId}`)}
+                    onToggleFavorite={() => handleToggleTrial(t)}
+                  />
                 </div>
               ))
+            )}
+          </div>
+        )}
+
+        {!loading && !error && tab === 'favorites' && (
+          <div className="flex flex-col gap-3">
+            {favorites.length === 0 ? (
+              <EmptyState text="暂无收藏。点击卡片右上角星标即可收藏，数据保存在本机。" />
+            ) : (
+              <>
+                {favoritePapers.length > 0 && (
+                  <p className="px-1 text-xs font-medium tracking-wide text-slate-500">
+                    文献 {favoritePapers.length}
+                  </p>
+                )}
+                {favoritePapers.map((p, i) => {
+                  const id = p.pmid || p.title
+                  return (
+                    <div
+                      key={`fav-p-${id}`}
+                      className="rise-in"
+                      style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
+                    >
+                      <PaperCard
+                        paper={p}
+                        favorited
+                        onToggleFavorite={() => handleTogglePaper(p)}
+                      />
+                    </div>
+                  )
+                })}
+                {favoriteTrials.length > 0 && (
+                  <p className="mt-2 px-1 text-xs font-medium tracking-wide text-slate-500">
+                    试验 {favoriteTrials.length}
+                  </p>
+                )}
+                {favoriteTrials.map((t, i) => (
+                  <div
+                    key={`fav-t-${t.nctId}`}
+                    className="rise-in"
+                    style={{
+                      animationDelay: `${Math.min(i + favoritePapers.length, 8) * 40}ms`,
+                    }}
+                  >
+                    <TrialCard
+                      trial={t}
+                      favorited
+                      onToggleFavorite={() => handleToggleTrial(t)}
+                    />
+                  </div>
+                ))}
+              </>
             )}
           </div>
         )}
@@ -193,7 +304,7 @@ export default function App() {
         <p className="text-[11px] leading-relaxed text-slate-500">
           上海交通大学医学院附属瑞金医院 · 肿瘤内科
           <br />
-          RJ-Onc Radar · 科研追踪 PWA
+          RJ-Onc Radar · 收藏保存在本机浏览器
         </p>
       </footer>
     </div>
@@ -214,7 +325,7 @@ function TabButton({
       type="button"
       onClick={onClick}
       className={[
-        'flex-1 rounded-lg px-3 py-2.5 text-sm font-medium transition-all',
+        'flex-1 rounded-lg px-2 py-2.5 text-sm font-medium transition-all sm:px-3',
         active
           ? 'bg-sky-500/20 text-sky-200 shadow-sm ring-1 ring-sky-400/40'
           : 'text-slate-400 hover:text-slate-200',
