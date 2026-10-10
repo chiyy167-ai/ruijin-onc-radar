@@ -12,6 +12,11 @@ import {
   type FavoriteItem,
 } from './lib/favorites'
 import {
+  formatCacheAge,
+  loadCachedData,
+  saveCachedData,
+} from './lib/dataCache'
+import {
   loadPrefs,
   loadReadIds,
   savePrefs,
@@ -23,6 +28,7 @@ import type { Paper, RadarData, Trial } from './types'
 
 type Tab = 'papers' | 'trials' | 'bookmarks'
 const MIN_SPLASH_MS = 1400
+const CACHE_SPLASH_MS = 350
 
 function paperId(p: Paper) {
   return p.pmid || p.title
@@ -57,9 +63,15 @@ function sortTrials(list: Trial[], sort: SortKey): Trial[] {
 }
 
 export default function App() {
-  const [data, setData] = useState<RadarData | null>(null)
+  const [data, setData] = useState<RadarData | null>(() => {
+    return loadCachedData()?.data ?? null
+  })
+  const [cacheAt, setCacheAt] = useState<string | null>(() => {
+    return loadCachedData()?.cachedAt ?? null
+  })
   const [error, setError] = useState<string | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(() => !loadCachedData())
+  const [refreshing, setRefreshing] = useState(false)
   const [showSplash, setShowSplash] = useState(true)
   const [tab, setTab] = useState<Tab>('papers')
   const [selectedDisease, setSelectedDisease] = useState<string | null>(null)
@@ -87,24 +99,46 @@ export default function App() {
   useEffect(() => {
     let cancelled = false
     const started = Date.now()
+    const hadCache = !!loadCachedData()
+
+    // 有缓存：短闪屏后立刻进主界面，网络在后台更新
+    if (hadCache) {
+      const wait = Math.max(0, CACHE_SPLASH_MS - (Date.now() - started))
+      window.setTimeout(() => {
+        if (!cancelled) setShowSplash(false)
+      }, wait)
+    }
 
     async function load() {
-      setLoading(true)
+      if (!hadCache) {
+        setLoading(true)
+      } else {
+        setRefreshing(true)
+      }
       setError(null)
+
       try {
         const res = await fetch(`${import.meta.env.BASE_URL}data.json`, {
-          cache: 'no-cache',
+          // 允许浏览器/SW 缓存命中，再配合本地 localStorage 做双层加速
+          cache: 'default',
         })
         if (!res.ok) throw new Error(`加载失败 (${res.status})`)
         const json = (await res.json()) as RadarData
-        if (!cancelled) setData(json)
+        if (cancelled) return
+        setData(json)
+        saveCachedData(json)
+        setCacheAt(new Date().toISOString())
       } catch (e) {
-        if (!cancelled) {
+        if (cancelled) return
+        // 有本地缓存时静默失败，继续用缓存
+        if (!hadCache && !loadCachedData()) {
           setError(e instanceof Error ? e.message : '数据加载失败')
         }
       } finally {
-        if (!cancelled) {
-          setLoading(false)
+        if (cancelled) return
+        setLoading(false)
+        setRefreshing(false)
+        if (!hadCache) {
           const wait = Math.max(0, MIN_SPLASH_MS - (Date.now() - started))
           window.setTimeout(() => {
             if (!cancelled) setShowSplash(false)
@@ -301,11 +335,28 @@ export default function App() {
           <div className="mt-3 flex flex-wrap gap-2">
             <div className="inline-flex items-center gap-2 rounded-full bg-slate-900/60 px-3 py-1 text-[11px] text-slate-400 ring-1 ring-slate-700/70">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                <span
+                  className={[
+                    'absolute inline-flex h-full w-full rounded-full opacity-60',
+                    refreshing ? 'animate-ping bg-sky-400' : 'animate-ping bg-emerald-400',
+                  ].join(' ')}
+                />
+                <span
+                  className={[
+                    'relative inline-flex h-2 w-2 rounded-full',
+                    refreshing ? 'bg-sky-400' : 'bg-emerald-400',
+                  ].join(' ')}
+                />
               </span>
-              更新：{data?.updatedAt ?? (loading ? '加载中…' : '—')}
+              {refreshing
+                ? '正在后台更新…'
+                : `更新：${data?.updatedAt ?? (loading ? '加载中…' : '—')}`}
             </div>
+            {cacheAt && (
+              <div className="inline-flex items-center rounded-full bg-slate-900/60 px-3 py-1 text-[11px] text-slate-500 ring-1 ring-slate-700/70">
+                本地缓存 · {formatCacheAge(cacheAt)}
+              </div>
+            )}
             <div className="inline-flex items-center rounded-full bg-slate-900/60 px-3 py-1 text-[11px] text-slate-400 ring-1 ring-slate-700/70">
               书签 {bookmarks.length} · 已读 {readIds.size}
             </div>
