@@ -12,14 +12,18 @@ import {
 
 interface PaperCardProps {
   paper: Paper
-  favorited: boolean
-  onToggleFavorite: () => void
+  bookmarked: boolean
+  isRead: boolean
+  onToggleBookmark: () => void
+  onToggleRead: () => void
 }
 
 interface TrialCardProps {
   trial: Trial
-  favorited: boolean
-  onToggleFavorite: () => void
+  bookmarked: boolean
+  isRead: boolean
+  onToggleBookmark: () => void
+  onToggleRead: () => void
 }
 
 function Pill({
@@ -42,7 +46,7 @@ function Pill({
   )
 }
 
-function StarIcon({ filled }: { filled: boolean }) {
+function BookmarkIcon({ filled }: { filled: boolean }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -55,7 +59,7 @@ function StarIcon({ filled }: { filled: boolean }) {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="M12 3.5l2.7 5.47 6.04.88-4.37 4.26 1.03 6.02L12 17.27 6.6 20.13l1.03-6.02L3.26 9.85l6.04-.88L12 3.5z"
+        d="M6 4.5h12a1 1 0 011 1V20l-7-3.5L5 20V5.5a1 1 0 011-1z"
       />
     </svg>
   )
@@ -82,14 +86,30 @@ async function copyText(text: string): Promise<boolean> {
   }
 }
 
+async function shareContent(title: string, text: string, url: string) {
+  if (navigator.share) {
+    try {
+      await navigator.share({ title, text, url })
+      return true
+    } catch {
+      /* user cancelled */
+    }
+  }
+  return copyText(`${title}\n${url}`)
+}
+
 export function PaperCard({
   paper,
-  favorited,
-  onToggleFavorite,
+  bookmarked,
+  isRead,
+  onToggleBookmark,
+  onToggleRead,
 }: PaperCardProps) {
   const diseases = paper.categories?.disease ?? []
   const studyTypes = paper.categories?.studyType ?? []
   const [copied, setCopied] = useState(false)
+  const [expanded, setExpanded] = useState(false)
+  const [shared, setShared] = useState(false)
 
   const handleCopy = async () => {
     const ok = await copyText(formatPaperCitation(paper))
@@ -99,8 +119,25 @@ export function PaperCard({
     }
   }
 
+  const handleShare = async () => {
+    const ok = await shareContent(
+      paper.title,
+      formatPaperCitation(paper),
+      paper.pubmedUrl,
+    )
+    if (ok) {
+      setShared(true)
+      window.setTimeout(() => setShared(false), 1600)
+    }
+  }
+
   return (
-    <article className="paper-card relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#1e293b]/90 p-4 backdrop-blur-sm">
+    <article
+      className={[
+        'paper-card relative overflow-hidden rounded-2xl border bg-[#1e293b]/90 p-4 backdrop-blur-sm',
+        isRead ? 'border-slate-700/40 opacity-80' : 'border-slate-700/60',
+      ].join(' ')}
+    >
       <div className="absolute inset-y-3 left-0 w-1 rounded-r-full bg-gradient-to-b from-sky-400/80 to-sky-600/20" />
 
       <div className="flex items-start gap-2 pl-2">
@@ -111,31 +148,32 @@ export function PaperCard({
           className="min-w-0 flex-1 text-[15px] font-semibold leading-snug text-slate-50 hover:text-sky-300"
         >
           {paper.title}
+          {isRead && (
+            <span className="ml-2 align-middle text-[11px] font-normal text-slate-500">
+              已读
+            </span>
+          )}
         </a>
         <button
           type="button"
-          onClick={onToggleFavorite}
-          aria-label={favorited ? '取消收藏' : '收藏文献'}
-          aria-pressed={favorited}
+          onClick={onToggleBookmark}
+          aria-label={bookmarked ? '取消书签' : '加入书签'}
+          aria-pressed={bookmarked}
           className={[
             'shrink-0 rounded-full p-1.5 transition-colors',
-            favorited
-              ? 'text-amber-300 bg-amber-400/10 ring-1 ring-amber-400/30'
-              : 'text-slate-500 hover:text-amber-300 hover:bg-slate-800',
+            bookmarked
+              ? 'bg-amber-400/10 text-amber-300 ring-1 ring-amber-400/30'
+              : 'text-slate-500 hover:bg-slate-800 hover:text-amber-300',
           ].join(' ')}
         >
-          <StarIcon filled={favorited} />
+          <BookmarkIcon filled={bookmarked} />
         </button>
       </div>
 
       {(diseases.length > 0 || studyTypes.length > 0) && (
         <div className="mt-2.5 flex flex-wrap gap-1.5 pl-2">
           {diseases.map((d) => (
-            <Pill
-              key={`d-${d}`}
-              text={DISEASE_LABELS[d] ?? d}
-              tone="disease"
-            />
+            <Pill key={`d-${d}`} text={DISEASE_LABELS[d] ?? d} tone="disease" />
           ))}
           {studyTypes.map((t) => (
             <Pill
@@ -147,13 +185,14 @@ export function PaperCard({
         </div>
       )}
 
-      {/* 出处 */}
       <div className="mt-3 space-y-1.5 pl-2">
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-400">
           <span className="rounded bg-sky-500/10 px-1.5 py-0.5 font-medium text-sky-300/90 ring-1 ring-sky-500/20">
             出处 PubMed
           </span>
-          <span className="text-slate-300">{paper.journal || 'Unknown journal'}</span>
+          <span className="text-slate-300">
+            {paper.journal || 'Unknown journal'}
+          </span>
           {paper.date && (
             <>
               <span className="text-slate-600">·</span>
@@ -175,17 +214,47 @@ export function PaperCard({
           <button
             type="button"
             onClick={handleCopy}
-            className="rounded-full px-2.5 py-0.5 text-[11px] text-slate-300 ring-1 ring-slate-600/80 transition-colors hover:bg-slate-800 hover:text-white"
+            className="rounded-full px-2.5 py-0.5 text-[11px] text-slate-300 ring-1 ring-slate-600/80 hover:bg-slate-800"
           >
-            {copied ? '已复制出处' : '复制出处'}
+            {copied ? '已复制' : '复制出处'}
+          </button>
+          <button
+            type="button"
+            onClick={handleShare}
+            className="rounded-full px-2.5 py-0.5 text-[11px] text-slate-300 ring-1 ring-slate-600/80 hover:bg-slate-800"
+          >
+            {shared ? '已分享/复制' : '分享'}
+          </button>
+          <button
+            type="button"
+            onClick={onToggleRead}
+            className="rounded-full px-2.5 py-0.5 text-[11px] text-slate-300 ring-1 ring-slate-600/80 hover:bg-slate-800"
+          >
+            {isRead ? '标为未读' : '标为已读'}
           </button>
         </div>
       </div>
 
       {paper.abstract && (
-        <p className="mt-3 line-clamp-4 pl-2 text-sm leading-relaxed text-slate-400">
-          {paper.abstract}
-        </p>
+        <div className="mt-3 pl-2">
+          <p
+            className={[
+              'text-sm leading-relaxed text-slate-400',
+              expanded ? '' : 'line-clamp-3',
+            ].join(' ')}
+          >
+            {paper.abstract}
+          </p>
+          {paper.abstract.length > 120 && (
+            <button
+              type="button"
+              onClick={() => setExpanded((v) => !v)}
+              className="mt-1.5 text-xs text-sky-400/90"
+            >
+              {expanded ? '收起摘要' : '展开摘要'}
+            </button>
+          )}
+        </div>
       )}
     </article>
   )
@@ -193,10 +262,13 @@ export function PaperCard({
 
 export function TrialCard({
   trial,
-  favorited,
-  onToggleFavorite,
+  bookmarked,
+  isRead,
+  onToggleBookmark,
+  onToggleRead,
 }: TrialCardProps) {
   const [copied, setCopied] = useState(false)
+  const [shared, setShared] = useState(false)
 
   const handleCopy = async () => {
     const ok = await copyText(formatTrialCitation(trial))
@@ -206,8 +278,25 @@ export function TrialCard({
     }
   }
 
+  const handleShare = async () => {
+    const ok = await shareContent(
+      trial.title,
+      formatTrialCitation(trial),
+      trial.url,
+    )
+    if (ok) {
+      setShared(true)
+      window.setTimeout(() => setShared(false), 1600)
+    }
+  }
+
   return (
-    <article className="paper-card relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#1e293b]/90 p-4 backdrop-blur-sm">
+    <article
+      className={[
+        'paper-card relative overflow-hidden rounded-2xl border bg-[#1e293b]/90 p-4 backdrop-blur-sm',
+        isRead ? 'border-slate-700/40 opacity-80' : 'border-slate-700/60',
+      ].join(' ')}
+    >
       <div className="absolute inset-y-3 left-0 w-1 rounded-r-full bg-gradient-to-b from-emerald-400/80 to-emerald-600/20" />
 
       <div className="flex items-start gap-2 pl-2">
@@ -218,20 +307,25 @@ export function TrialCard({
           className="min-w-0 flex-1 text-[15px] font-semibold leading-snug text-slate-50 hover:text-sky-300"
         >
           {trial.title}
+          {isRead && (
+            <span className="ml-2 align-middle text-[11px] font-normal text-slate-500">
+              已读
+            </span>
+          )}
         </a>
         <button
           type="button"
-          onClick={onToggleFavorite}
-          aria-label={favorited ? '取消收藏' : '收藏试验'}
-          aria-pressed={favorited}
+          onClick={onToggleBookmark}
+          aria-label={bookmarked ? '取消书签' : '加入书签'}
+          aria-pressed={bookmarked}
           className={[
             'shrink-0 rounded-full p-1.5 transition-colors',
-            favorited
-              ? 'text-amber-300 bg-amber-400/10 ring-1 ring-amber-400/30'
-              : 'text-slate-500 hover:text-amber-300 hover:bg-slate-800',
+            bookmarked
+              ? 'bg-amber-400/10 text-amber-300 ring-1 ring-amber-400/30'
+              : 'text-slate-500 hover:bg-slate-800 hover:text-amber-300',
           ].join(' ')}
         >
-          <StarIcon filled={favorited} />
+          <BookmarkIcon filled={bookmarked} />
         </button>
       </div>
 
@@ -266,9 +360,23 @@ export function TrialCard({
           <button
             type="button"
             onClick={handleCopy}
-            className="rounded-full px-2.5 py-0.5 text-[11px] text-slate-300 ring-1 ring-slate-600/80 transition-colors hover:bg-slate-800 hover:text-white"
+            className="rounded-full px-2.5 py-0.5 text-[11px] text-slate-300 ring-1 ring-slate-600/80 hover:bg-slate-800"
           >
-            {copied ? '已复制出处' : '复制出处'}
+            {copied ? '已复制' : '复制出处'}
+          </button>
+          <button
+            type="button"
+            onClick={handleShare}
+            className="rounded-full px-2.5 py-0.5 text-[11px] text-slate-300 ring-1 ring-slate-600/80 hover:bg-slate-800"
+          >
+            {shared ? '已分享/复制' : '分享'}
+          </button>
+          <button
+            type="button"
+            onClick={onToggleRead}
+            className="rounded-full px-2.5 py-0.5 text-[11px] text-slate-300 ring-1 ring-slate-600/80 hover:bg-slate-800"
+          >
+            {isRead ? '标为未读' : '标为已读'}
           </button>
         </div>
       </div>

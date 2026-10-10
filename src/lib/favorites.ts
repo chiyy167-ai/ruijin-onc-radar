@@ -100,3 +100,18 @@ export function formatTrialCitation(trial: Trial): string {
     .filter(Boolean)
     .join('\n')
 }
+
+/** 导出全部书签为纯文本，便于备份或粘贴到笔记 */
+export function exportFavoritesText(items?: FavoriteItem[]): string {
+  const list = items ?? loadFavorites()
+  if (list.length === 0) return '（暂无书签）'
+  const lines: string[] = [`瑞金肿瘤内科科研雷达 · 书签导出`, `共 ${list.length} 条`, '']
+  list.forEach((item, i) => {
+    lines.push(`—— ${i + 1}. ${item.kind === 'paper' ? '文献' : '试验'} ——`)
+    if (item.kind === 'paper') lines.push(formatPaperCitation(item.snapshot))
+    else lines.push(formatTrialCitation(item.snapshot))
+    lines.push(`收藏时间：${item.savedAt}`)
+    lines.push('')
+  })
+  return lines.join('\n')
+}
