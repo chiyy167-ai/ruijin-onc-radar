@@ -27,7 +27,7 @@ export default function LoadingScreen({ visible }: LoadingScreenProps) {
 
         <div className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full bg-white/95 p-2 shadow-[0_0_40px_rgba(185,28,28,0.25)] ring-1 ring-amber-200/40">
           <img
-            src={`${import.meta.env.BASE_URL}logo-ruijin.svg`}
+            src={`${import.meta.env.BASE_URL}logo-ruijin.png`}
             alt="瑞金医院"
             className="h-full w-full object-contain"
             draggable={false}

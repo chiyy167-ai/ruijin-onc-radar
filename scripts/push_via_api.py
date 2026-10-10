@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-"""经 gh + api.github.com 推送当前 git 跟踪文件。"""
-
 from __future__ import annotations
 
 import base64
@@ -9,8 +7,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-OWNER = "chiyy167-ai"
-REPO = "ruijin-onc-radar"
+OWNER, REPO = "chiyy167-ai", "ruijin-onc-radar"
 ROOT = Path(__file__).resolve().parent.parent
 BASE = f"repos/{OWNER}/{REPO}"
 
@@ -35,55 +32,35 @@ def gh_api(method: str, endpoint: str, payload: dict | None = None) -> dict:
     return json.loads(out) if out.strip() else {}
 
 
-def git_files() -> list[str]:
-    out = subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT)
-    return [p.decode() for p in out.split(b"\0") if p]
-
-
 def main() -> int:
-    msg = subprocess.check_output(
-        ["git", "log", "-1", "--pretty=%B"], cwd=ROOT, text=True
-    ).strip()
-    ref = gh_api("GET", f"{BASE}/git/ref/heads/main")
-    parent = ref["object"]["sha"]
-    print("parent", parent[:12])
-
-    paths = git_files()
-    tree_items = []
+    msg = subprocess.check_output(["git", "log", "-1", "--pretty=%B"], cwd=ROOT, text=True).strip()
+    parent = gh_api("GET", f"{BASE}/git/ref/heads/main")["object"]["sha"]
+    paths = [
+        p.decode()
+        for p in subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT).split(b"\0")
+        if p
+    ]
+    tree = []
     for i, rel in enumerate(paths, 1):
         raw = (ROOT / rel).read_bytes()
         blob = gh_api(
             "POST",
             f"{BASE}/git/blobs",
-            {
-                "content": base64.b64encode(raw).decode("ascii"),
-                "encoding": "base64",
-            },
+            {"content": base64.b64encode(raw).decode("ascii"), "encoding": "base64"},
         )
-        tree_items.append(
-            {
-                "path": rel.replace("\\", "/"),
-                "mode": "100644",
-                "type": "blob",
-                "sha": blob["sha"],
-            }
+        tree.append(
+            {"path": rel.replace("\\", "/"), "mode": "100644", "type": "blob", "sha": blob["sha"]}
         )
         if i % 5 == 0 or i == len(paths):
             print(f"blob {i}/{len(paths)}")
-
-    tree_obj = gh_api("POST", f"{BASE}/git/trees", {"tree": tree_items})
+    tree_obj = gh_api("POST", f"{BASE}/git/trees", {"tree": tree})
     commit = gh_api(
         "POST",
         f"{BASE}/git/commits",
         {"message": msg, "tree": tree_obj["sha"], "parents": [parent]},
     )
-    gh_api(
-        "PATCH",
-        f"{BASE}/git/refs/heads/main",
-        {"sha": commit["sha"], "force": True},
-    )
-    print("commit", commit["sha"][:12])
-    print(f"OK https://github.com/{OWNER}/{REPO}")
+    gh_api("PATCH", f"{BASE}/git/refs/heads/main", {"sha": commit["sha"], "force": True})
+    print("OK", commit["sha"][:12])
     return 0
 
 

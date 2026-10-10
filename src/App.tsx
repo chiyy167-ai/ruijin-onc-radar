@@ -86,7 +86,7 @@ export default function App() {
           <div className="flex items-start gap-3.5">
             <div className="shrink-0 rounded-full bg-white p-1 shadow-[0_0_24px_rgba(185,28,28,0.22)] ring-1 ring-amber-200/30">
               <img
-                src={`${import.meta.env.BASE_URL}logo-ruijin.svg`}
+                src={`${import.meta.env.BASE_URL}logo-ruijin.png`}
                 alt="瑞金医院"
                 className="h-14 w-14 object-contain sm:h-16 sm:w-16"
                 draggable={false}
